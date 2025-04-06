@@ -1,28 +1,59 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "My Awesome Project",
-  description: "A VitePress Site",
+  lang: "zh-CN",
+  title: "大脑副本",
+  description: "cheekhan,占卜",
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
+    // 导航栏
+    logo: "/icon.jpg",
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: "首页", link: "/" },
+      { text: "工作", link: "/work/" },
+      { text: "计算机", link: "/cst/" },
+      { text: "个人", link: "/personal/" },
     ],
-
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
-    ],
+    // 侧边栏
+    sidebar: {
+      "/cst/": [
+        {
+          text: "计算机科学与技术",
+          items: [
+            { text: "首页", link: "/cst/" },
+            { text: "测试", link: "/cst/demo" },
+          ],
+        },
+      ],
+      "/personal/": [
+        {
+          text: "个人",
+          items: [{ text: "首页", link: "/personal/" }],
+        },
+      ],
+      "/work/": [
+        {
+          text: "工作",
+          items: [{ text: "首页", link: "/work/" }],
+        },
+      ],
+      "/": [
+        {
+          text: "首页",
+          items: [{ text: "首页", link: "/" }],
+        },
+      ],
+    },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
-  }
-})
+      {
+        icon: "github",
+        link: "https://github.com/cheekhan/cheekhan.github.io",
+      },
+    ],
+    lastUpdated: true,
+    search: {
+      provider: 'local'
+    }
+  },
+});

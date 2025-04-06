@@ -3,23 +3,27 @@
 layout: home
 
 hero:
-  name: "My Awesome Project"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  name: "cheekhan"
+  text: "大脑寄存处"
+  tagline: 知识改变...改个der啊
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: 工作心得
+      link: /work/
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 基操
+      link: /cst/
+    - theme: alt
+      text: 牛逼不牛逼
+      link: /personal/
+    - theme: alt
+      text: 我是谁
+      link: /about
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 我会个啥
+    details: 拿什么介绍自己，我这个菜逼
+  - title: 闭关修炼中
+    details: 等我好好沉淀一下
 ---
 
