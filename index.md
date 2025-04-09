@@ -8,17 +8,17 @@ hero:
   tagline: 知识改变...改个der啊
   actions:
     - theme: brand
-      text: 工作心得
+      text: 工作沉淀
       link: /work/
     - theme: alt
-      text: 基操
+      text: 基操演练
       link: /cst/
     - theme: alt
-      text: 牛逼不牛逼
-      link: /personal/
+      text: 牛逼啊
+      link: /personal/MindReader/base.md
     - theme: alt
-      text: 我是谁
-      link: /about
+      text: 看看我
+      link: /personal/index.md
 
 features:
   - title: 我会个啥

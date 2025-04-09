@@ -28,13 +28,31 @@ export default defineConfig({
       "/personal/": [
         {
           text: "个人",
-          items: [{ text: "首页", link: "/personal/" }],
+          items: [
+            { text: "我是哪个小饼干", link: "/personal/index.md" },
+            {
+              text: "大六壬",
+              items: [
+                { text: "前置概念", link: "/personal/MindReader/base.md" },
+                { text: "起课排传", link: "/personal/MindReader/setup.md" },
+              ],
+            },
+          ],
         },
       ],
       "/work/": [
         {
           text: "工作",
-          items: [{ text: "首页", link: "/work/" }],
+          items: [
+            { text: "常用工具", link: "/work/" },
+            {
+              text: "博客",
+              items: [
+                { text: "rollup构建参数", link: "/work/blog/rollupOptions.md" },
+                { text: "跨域处理", link: "/work/blog/cors.md" },
+              ],
+            },
+          ],
         },
       ],
       "/": [
@@ -53,7 +71,7 @@ export default defineConfig({
     ],
     lastUpdated: true,
     search: {
-      provider: 'local'
-    }
+      provider: "local",
+    },
   },
 });
