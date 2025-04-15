@@ -19,10 +19,7 @@ export default defineConfig({
       "/cst/": [
         {
           text: "计算机科学与技术",
-          items: [
-            { text: "首页", link: "/cst/" },
-            { text: "测试", link: "/cst/demo" },
-          ],
+          items: [{ text: "首页", link: "/cst/" }],
         },
       ],
       "/personal/": [
@@ -73,6 +70,11 @@ export default defineConfig({
     lastUpdated: true,
     search: {
       provider: "local",
+    },
+  },
+  markdown: {
+    container: {
+      infoLabel: "口诀：",
     },
   },
 });
