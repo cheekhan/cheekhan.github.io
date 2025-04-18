@@ -33,6 +33,7 @@ export default defineConfig({
                 { text: "前置概念", link: "/personal/MindReader/base.md" },
                 { text: "起课排传", link: "/personal/MindReader/setup.md" },
                 { text: "九宗门", link: "/personal/MindReader/九宗门.md" },
+                { text: "月将是什么", link: "/personal/MindReader/月将.md" },
               ],
             },
           ],
