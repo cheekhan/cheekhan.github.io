@@ -15,10 +15,10 @@ hero:
       link: /cst/
     - theme: alt
       text: 牛逼啊
-      link: /personal/MindReader/base.md
+      link: /personal/MindReader/base
     - theme: alt
       text: 看看我
-      link: /personal/index.md
+      link: /personal/index
 
 features:
   - title: 我会个啥

@@ -26,17 +26,17 @@ export default defineConfig({
         {
           text: "个人",
           items: [
-            { text: "我是哪个小饼干", link: "/personal/index.md" },
+            { text: "我是哪个小饼干", link: "/personal/index" },
             {
               text: "大六壬",
               items: [
-                { text: "前置概念", link: "/personal/MindReader/base.md" },
-                { text: "起课排传", link: "/personal/MindReader/setup.md" },
-                { text: "九宗门", link: "/personal/MindReader/九宗门.md" },
-                { text: "月将", link: "/personal/MindReader/月将.md" },
-                { text: "天将", link: "/personal/MindReader/十二天将.md" },
-                { text: "十二长生", link: "/personal/MindReader/十二长生.md" },
-                { text: "神煞", link: "/personal/MindReader/神煞.md" },
+                { text: "前置概念", link: "/personal/MindReader/base" },
+                { text: "起课排传", link: "/personal/MindReader/setup" },
+                { text: "九宗门", link: "/personal/MindReader/九宗门" },
+                { text: "月将", link: "/personal/MindReader/月将" },
+                { text: "天将", link: "/personal/MindReader/十二天将" },
+                { text: "十二长生", link: "/personal/MindReader/十二长生" },
+                { text: "神煞", link: "/personal/MindReader/神煞" },
               ],
             },
           ],
@@ -50,8 +50,8 @@ export default defineConfig({
             {
               text: "博客",
               items: [
-                { text: "rollup构建参数", link: "/work/blog/rollupOptions.md" },
-                { text: "跨域处理", link: "/work/blog/cors.md" },
+                { text: "rollup构建参数", link: "/work/blog/rollupOptions" },
+                { text: "跨域处理", link: "/work/blog/cors" },
               ],
             },
           ],
