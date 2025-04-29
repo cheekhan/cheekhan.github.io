@@ -294,7 +294,7 @@ p {
     background-color: rgb(132.5, 64, 64);
     padding-left: 20px;
     border-radius: 4px;
-
+    margin-top: 10px;
 }
 
 .result {
