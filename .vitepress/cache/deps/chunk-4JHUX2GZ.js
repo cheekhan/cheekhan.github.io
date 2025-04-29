@@ -27,6 +27,7 @@ import {
   readonly,
   ref,
   shallowReactive,
+  shallowReadonly,
   shallowRef,
   toRaw,
   toRef,
@@ -37,7 +38,7 @@ import {
   watchEffect
 } from "./chunk-CQOUZRMK.js";
 
-// node_modules/.pnpm/@vueuse+shared@12.8.2/node_modules/@vueuse/shared/index.mjs
+// node_modules/.pnpm/@vueuse+shared@13.1.0_vue@3.5.13/node_modules/@vueuse/shared/index.mjs
 function computedEager(fn, options) {
   var _a;
   const result = shallowRef();
@@ -138,7 +139,7 @@ var injectLocal = (...args) => {
     return localProvidedStateMap.get(instance)[key];
   return inject(...args);
 };
-var provideLocal = (key, value) => {
+function provideLocal(key, value) {
   var _a;
   const instance = (_a = getCurrentInstance()) == null ? void 0 : _a.proxy;
   if (instance == null)
@@ -147,8 +148,8 @@ var provideLocal = (key, value) => {
     localProvidedStateMap.set(instance, /* @__PURE__ */ Object.create(null));
   const localProvidedState = localProvidedStateMap.get(instance);
   localProvidedState[key] = value;
-  provide(key, value);
-};
+  return provide(key, value);
+}
 function createInjectionState(composable, options) {
   const key = (options == null ? void 0 : options.injectionKey) || Symbol(composable.name || "InjectionState");
   const defaultValue = options == null ? void 0 : options.defaultValue;
@@ -331,6 +332,43 @@ function getIsIOS() {
   var _a, _b;
   return isClient && ((_a = window == null ? void 0 : window.navigator) == null ? void 0 : _a.userAgent) && (/iP(?:ad|hone|od)/.test(window.navigator.userAgent) || ((_b = window == null ? void 0 : window.navigator) == null ? void 0 : _b.maxTouchPoints) > 2 && /iPad|Macintosh/.test(window == null ? void 0 : window.navigator.userAgent));
 }
+function toRef2(...args) {
+  if (args.length !== 1)
+    return toRef(...args);
+  const r = args[0];
+  return typeof r === "function" ? readonly(customRef(() => ({ get: r, set: noop }))) : ref(r);
+}
+var resolveRef = toRef2;
+function reactivePick(obj, ...keys2) {
+  const flatKeys = keys2.flat();
+  const predicate = flatKeys[0];
+  return reactiveComputed(() => typeof predicate === "function" ? Object.fromEntries(Object.entries(toRefs(obj)).filter(([k, v]) => predicate(toValue(v), k))) : Object.fromEntries(flatKeys.map((k) => [k, toRef2(obj, k)])));
+}
+function refAutoReset(defaultValue, afterMs = 1e4) {
+  return customRef((track, trigger) => {
+    let value = toValue(defaultValue);
+    let timer;
+    const resetAfter = () => setTimeout(() => {
+      value = toValue(defaultValue);
+      trigger();
+    }, toValue(afterMs));
+    tryOnScopeDispose(() => {
+      clearTimeout(timer);
+    });
+    return {
+      get() {
+        track();
+        return value;
+      },
+      set(newValue) {
+        value = newValue;
+        trigger();
+        clearTimeout(timer);
+        timer = resetAfter();
+      }
+    };
+  });
+}
 function createFilterWrapper(filter, fn) {
   function wrapper(...args) {
     return new Promise((resolve, reject) => {
@@ -456,19 +494,6 @@ function pausableFilter(extendFilter = bypassFilter, options = {}) {
   };
   return { isActive: readonly(isActive), pause, resume, eventFilter };
 }
-function cacheStringFunction(fn) {
-  const cache = /* @__PURE__ */ Object.create(null);
-  return (str) => {
-    const hit = cache[str];
-    return hit || (cache[str] = fn(str));
-  };
-}
-var hyphenateRE = /\B([A-Z])/g;
-var hyphenate = cacheStringFunction((str) => str.replace(hyphenateRE, "-$1").toLowerCase());
-var camelizeRE = /-(\w)/g;
-var camelize = cacheStringFunction((str) => {
-  return str.replace(camelizeRE, (_, c) => c ? c.toUpperCase() : "");
-});
 function promiseTimeout(ms, throwOnTimeout = false, reason = "Timeout") {
   return new Promise((resolve, reject) => {
     if (throwOnTimeout)
@@ -532,48 +557,24 @@ function objectOmit(obj, keys2, omitUndefined = false) {
 function objectEntries(obj) {
   return Object.entries(obj);
 }
-function getLifeCycleTarget(target) {
-  return target || getCurrentInstance();
-}
 function toArray(value) {
   return Array.isArray(value) ? value : [value];
 }
-function toRef2(...args) {
-  if (args.length !== 1)
-    return toRef(...args);
-  const r = args[0];
-  return typeof r === "function" ? readonly(customRef(() => ({ get: r, set: noop }))) : ref(r);
+function cacheStringFunction(fn) {
+  const cache = /* @__PURE__ */ Object.create(null);
+  return (str) => {
+    const hit = cache[str];
+    return hit || (cache[str] = fn(str));
+  };
 }
-var resolveRef = toRef2;
-function reactivePick(obj, ...keys2) {
-  const flatKeys = keys2.flat();
-  const predicate = flatKeys[0];
-  return reactiveComputed(() => typeof predicate === "function" ? Object.fromEntries(Object.entries(toRefs(obj)).filter(([k, v]) => predicate(toValue(v), k))) : Object.fromEntries(flatKeys.map((k) => [k, toRef2(obj, k)])));
-}
-function refAutoReset(defaultValue, afterMs = 1e4) {
-  return customRef((track, trigger) => {
-    let value = toValue(defaultValue);
-    let timer;
-    const resetAfter = () => setTimeout(() => {
-      value = toValue(defaultValue);
-      trigger();
-    }, toValue(afterMs));
-    tryOnScopeDispose(() => {
-      clearTimeout(timer);
-    });
-    return {
-      get() {
-        track();
-        return value;
-      },
-      set(newValue) {
-        value = newValue;
-        trigger();
-        clearTimeout(timer);
-        timer = resetAfter();
-      }
-    };
-  });
+var hyphenateRE = /\B([A-Z])/g;
+var hyphenate = cacheStringFunction((str) => str.replace(hyphenateRE, "-$1").toLowerCase());
+var camelizeRE = /-(\w)/g;
+var camelize = cacheStringFunction((str) => {
+  return str.replace(camelizeRE, (_, c) => c ? c.toUpperCase() : "");
+});
+function getLifeCycleTarget(target) {
+  return target || getCurrentInstance();
 }
 function useDebounceFn(fn, ms = 200, options = {}) {
   return createFilterWrapper(
@@ -582,12 +583,12 @@ function useDebounceFn(fn, ms = 200, options = {}) {
   );
 }
 function refDebounced(value, ms = 200, options = {}) {
-  const debounced = ref(value.value);
+  const debounced = ref(toValue(value));
   const updater = useDebounceFn(() => {
     debounced.value = value.value;
   }, ms, options);
   watch(value, () => updater());
-  return debounced;
+  return shallowReadonly(debounced);
 }
 function refDefault(source, defaultValue) {
   return computed({
@@ -609,7 +610,7 @@ function useThrottleFn(fn, ms = 200, trailing = false, leading = true, rejectOnC
 function refThrottled(value, delay = 200, trailing = true, leading = true) {
   if (delay <= 0)
     return value;
-  const throttled = ref(value.value);
+  const throttled = ref(toValue(value));
   const updater = useThrottleFn(() => {
     throttled.value = value.value;
   }, delay, trailing, leading);
@@ -806,7 +807,7 @@ function tryOnBeforeUnmount(fn, target) {
     onBeforeUnmount(fn, target);
 }
 function tryOnMounted(fn, sync = true, target) {
-  const instance = getLifeCycleTarget();
+  const instance = getLifeCycleTarget(target);
   if (instance)
     onMounted(fn, target);
   else if (sync)
@@ -1065,7 +1066,7 @@ function useCounter(initialValue = 0, options = {}) {
     _initialValue = val;
     return set2(val);
   };
-  return { count, inc, dec, get: get2, set: set2, reset };
+  return { count: shallowReadonly(count), inc, dec, get: get2, set: set2, reset };
 }
 var REGEX_PARSE = /^(\d{4})[-/]?(\d{1,2})?[-/]?(\d{0,2})[T\s]*(\d{1,2})?:?(\d{1,2})?:?(\d{1,2})?[.:]?(\d+)?$/i;
 var REGEX_FORMAT = /[YMDHhms]o|\[([^\]]+)\]|Y{1,4}|M{1,4}|D{1,2}|d{1,4}|H{1,2}|h{1,2}|a{1,2}|A{1,2}|m{1,2}|s{1,2}|Z{1,2}|z{1,4}|SSS/g;
@@ -1197,7 +1198,7 @@ function useIntervalFn(cb, interval = 1e3, options = {}) {
   }
   tryOnScopeDispose(pause);
   return {
-    isActive,
+    isActive: shallowReadonly(isActive),
     pause,
     resume
   };
@@ -1223,12 +1224,12 @@ function useInterval(interval = 1e3, options = {}) {
   );
   if (exposeControls) {
     return {
-      counter,
+      counter: shallowReadonly(counter),
       reset,
       ...controls
     };
   } else {
-    return counter;
+    return shallowReadonly(counter);
   }
 }
 function useLastChanged(source, options = {}) {
@@ -1239,7 +1240,7 @@ function useLastChanged(source, options = {}) {
     () => ms.value = timestamp(),
     options
   );
-  return ms;
+  return shallowReadonly(ms);
 }
 function useTimeoutFn(cb, interval, options = {}) {
   const {
@@ -1276,7 +1277,7 @@ function useTimeoutFn(cb, interval, options = {}) {
   }
   tryOnScopeDispose(stop);
   return {
-    isPending: readonly(isPending),
+    isPending: shallowReadonly(isPending),
     start,
     stop
   };
@@ -1569,7 +1570,7 @@ function whenever(source, cb, options) {
   return stop;
 }
 
-// node_modules/.pnpm/@vueuse+core@12.8.2/node_modules/@vueuse/core/index.mjs
+// node_modules/.pnpm/@vueuse+core@13.1.0_vue@3.5.13/node_modules/@vueuse/core/index.mjs
 function computedAsync(evaluationCallback, initialState, optionsOrRef) {
   let options;
   if (isRef(optionsOrRef)) {
@@ -9465,13 +9466,15 @@ export {
   rand,
   hasOwn,
   isIOS,
+  toRef2 as toRef,
+  resolveRef,
+  reactivePick,
+  refAutoReset,
   createFilterWrapper,
   bypassFilter,
   debounceFilter,
   throttleFilter,
   pausableFilter,
-  hyphenate,
-  camelize,
   promiseTimeout,
   identity,
   createSingletonPromise,
@@ -9482,12 +9485,10 @@ export {
   objectPick,
   objectOmit,
   objectEntries,
-  getLifeCycleTarget,
   toArray,
-  toRef2 as toRef,
-  resolveRef,
-  reactivePick,
-  refAutoReset,
+  hyphenate,
+  camelize,
+  getLifeCycleTarget,
   useDebounceFn,
   refDebounced,
   refDefault,
@@ -9716,4 +9717,4 @@ export {
   useWindowScroll,
   useWindowSize
 };
-//# sourceMappingURL=chunk-MSWVC7RX.js.map
+//# sourceMappingURL=chunk-4JHUX2GZ.js.map

@@ -2,6 +2,7 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base:'/',
   lang: "zh-CN",
   title: "大脑副本",
   description: "cheekhan,占卜",
@@ -37,6 +38,16 @@ export default defineConfig({
                 { text: "天将", link: "/personal/MindReader/十二天将" },
                 { text: "十二长生", link: "/personal/MindReader/十二长生" },
                 { text: "神煞", link: "/personal/MindReader/神煞" },
+                {
+                  text: "壬占案例",
+                  collapsed: false,
+                  items: [
+                    {
+                      text: "案例01",
+                      link: "/personal/MindReader/case/case01",
+                    },
+                  ],
+                },
               ],
             },
           ],
