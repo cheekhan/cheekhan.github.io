@@ -4,7 +4,7 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   base:'/',
   lang: "zh-CN",
-  title: "大脑副本",
+  title: "CheeKhan",
   description: "cheekhan,占卜",
   themeConfig: {
     // 导航栏
