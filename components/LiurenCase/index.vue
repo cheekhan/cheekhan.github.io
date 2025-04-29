@@ -72,7 +72,7 @@ const gods = computed(() => {
             <div class="flex">
                 <p>{{ data.dateTime.Y }}年{{ data.dateTime.M }}月{{ data.dateTime.D }}日，{{ data.dateTime.H }}:{{
                     data.dateTime.m }}</p>
-                <p>本命:{{ data.user.root }}</p>
+                <p style="margin-right:38px;">本命：{{ data.user.root }}</p>
             </div>
             <table>
                 <tbody>
@@ -167,14 +167,85 @@ const gods = computed(() => {
                 <p>{{ data.dateTimeZh.m }}将</p>
                 <p>流年{{ data.user.flow }}</p>
             </div>
-
+            <p class="table-title-p">四课：</p>
+            <table>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>{{ data.sike[1].god }}</td>
+                        <td></td>
+                        <td>{{ data.sike[2].god }}</td>
+                        <td></td>
+                        <td>{{ data.sike[3].god }}</td>
+                        <td></td>
+                        <td>{{ data.sike[4].god }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ data.sike[1].topAttr }}</td>
+                        <td>{{ data.sike[1].top }}</td>
+                        <td>{{ data.sike[2].topAttr }}</td>
+                        <td>{{ data.sike[2].top }}</td>
+                        <td>{{ data.sike[3].topAttr }}</td>
+                        <td>{{ data.sike[3].top }}</td>
+                        <td>{{ data.sike[4].topAttr }}</td>
+                        <td>{{ data.sike[4].top }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ data.sike[1].bottomAttr }}</td>
+                        <td>{{ data.sike[1].bottom }}</td>
+                        <td>{{ data.sike[2].bottomAttr }}</td>
+                        <td>{{ data.sike[2].bottom }}</td>
+                        <td>{{ data.sike[3].bottomAttr }}</td>
+                        <td>{{ data.sike[3].bottom }}</td>
+                        <td>{{ data.sike[4].bottomAttr }}</td>
+                        <td>{{ data.sike[4].bottom }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="table-title-p">三传：</p>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>{{ data.sanchuan[1].lq }}</td>
+                        <td>{{ data.sanchuan[1].dun }}</td>
+                        <td>{{ data.sanchuan[1].chuan }}</td>
+                        <td>{{ data.sanchuan[1].god }}</td>
+                        <td>{{ data.sanchuan[1].isEmpty ? '☉' : '◎' }}</td>
+                        <td>{{ data.sanchuan[1].sha }}</td>
+                        <td>{{ data.sanchuan[1].wu }}</td>
+                        <td>{{ data.sanchuan[1].shier }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ data.sanchuan[2].lq }}</td>
+                        <td>{{ data.sanchuan[2].dun }}</td>
+                        <td>{{ data.sanchuan[2].chuan }}</td>
+                        <td>{{ data.sanchuan[2].god }}</td>
+                        <td>{{ data.sanchuan[2].isEmpty ? '☉' : '◎' }}</td>
+                        <td>{{ data.sanchuan[2].sha }}</td>
+                        <td>{{ data.sanchuan[2].wu }}</td>
+                        <td>{{ data.sanchuan[2].shier }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ data.sanchuan[3].lq }}</td>
+                        <td>{{ data.sanchuan[3].dun }}</td>
+                        <td>{{ data.sanchuan[3].chuan }}</td>
+                        <td>{{ data.sanchuan[3].god }}</td>
+                        <td>{{ data.sanchuan[3].isEmpty ? '☉' : '◎' }}</td>
+                        <td>{{ data.sanchuan[3].sha }}</td>
+                        <td>{{ data.sanchuan[3].wu }}</td>
+                        <td>{{ data.sanchuan[3].shier }}</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
+    <p class="result">{{ data.result }}</p>
 </template>
 
 <style scoped>
 .flex {
     display: flex;
+    justify-content: space-between;
 }
 
 .vp-doc th,
@@ -186,6 +257,10 @@ const gods = computed(() => {
 .vp-doc th,
 .vp-doc td {
     border-width: 0;
+}
+
+.vp-doc table {
+    margin: 10px auto 0;
 }
 
 .case-container {
@@ -212,5 +287,22 @@ p {
 
 .bg-4 {
     background-color: #1D1D1D;
+}
+
+.table-title-p {
+    text-align: left;
+    background-color: rgb(132.5, 64, 64);
+    padding-left: 20px;
+    border-radius: 4px;
+
+}
+
+.result {
+    background-color: #0A0A0A;
+    text-align: left;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    margin-top: 10px;
 }
 </style>

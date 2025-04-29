@@ -14,7 +14,7 @@ export default class CaseInfo {
     M: "乙巳",
     D: "乙巳",
     H: "巳",
-    m:"", // 月将
+    m: "戌", // 月将
   };
   // 用户本命，行年
   user = {
@@ -29,11 +29,11 @@ export default class CaseInfo {
   sike = {
     // 四课
     1: {
-      bottom: "", // 下
-      top: "", // 上
-      god: "", // 官
-      bottomAttr: "", // 五行
-      topAttr: "", // 五行
+      bottom: "子", // 下
+      top: "子", // 上
+      god: "贵", // 官
+      bottomAttr: "阴土", // 五行
+      topAttr: "阳土", // 五行
     },
     2: {
       bottom: "",
@@ -61,6 +61,7 @@ export default class CaseInfo {
     1: {
       lq: "", // 六亲
       dun: "", // 遁干
+      chuan: "", // 传
       god: "", // 乘
       isEmpty: false, // 空
       sha: "", // 煞
@@ -70,6 +71,7 @@ export default class CaseInfo {
     2: {
       lq: "", // 六亲
       dun: "", // 遁干
+      chuan: "", // 传
       god: "", // 乘
       isEmpty: false, // 空
       sha: "", // 煞
@@ -79,6 +81,7 @@ export default class CaseInfo {
     3: {
       lq: "", // 六亲
       dun: "", // 遁干
+      chuan: "", // 传
       god: "", // 乘
       isEmpty: false, // 空
       sha: "", // 煞
