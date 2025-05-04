@@ -4,16 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "dev": "vitepress dev --port 1420",
+    "build": "vitepress build --outDir dist",
+    "preview": "vitepress preview",
+    "tauri": "tauri"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.7.0",
   "devDependencies": {
+    "@tauri-apps/cli": "^2.5.0",
     "vitepress": "2.0.0-alpha.5"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.5.0",
+    "@tauri-apps/plugin-opener": "^2.2.6"
   }
 }
