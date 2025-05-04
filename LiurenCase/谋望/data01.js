@@ -1,4 +1,4 @@
-import CaseInfo from "./utils";
+import CaseInfo from "../utils";
 
 const case01 = new CaseInfo();
 case01.title = "徐学士四十一岁占前程";

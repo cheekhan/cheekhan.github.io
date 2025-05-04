@@ -2,7 +2,7 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base:'/',
+  base: "/",
   lang: "zh-CN",
   title: "CheeKhan",
   description: "cheekhan,占卜",
@@ -11,21 +11,15 @@ export default defineConfig({
     logo: "/icon.jpg",
     nav: [
       { text: "首页", link: "/" },
-      { text: "工作", link: "/work/" },
-      { text: "计算机", link: "/cst/" },
-      { text: "个人", link: "/personal/" },
+      { text: "大六壬", link: "/personal/" },
+      { text: "课例", link: "/LiurenCase/" },
+      { text: "排盘", link: "/Bootstrap/" },
     ],
     // 侧边栏
     sidebar: {
-      "/cst/": [
-        {
-          text: "计算机科学与技术",
-          items: [{ text: "首页", link: "/cst/" }],
-        },
-      ],
       "/personal/": [
         {
-          text: "个人",
+          text: "六壬基础",
           items: [
             { text: "我是哪个小饼干", link: "/personal/index" },
             {
@@ -38,44 +32,30 @@ export default defineConfig({
                 { text: "天将", link: "/personal/MindReader/十二天将" },
                 { text: "十二长生", link: "/personal/MindReader/十二长生" },
                 { text: "神煞", link: "/personal/MindReader/神煞" },
-                {
-                  text: "壬占案例",
-                  collapsed: false,
-                  items: [
-                    {
-                      text: "案例01",
-                      link: "/personal/MindReader/case/case01",
-                    },
-                  ],
-                },
               ],
             },
           ],
         },
       ],
-      "/work/": [
+      "/LiurenCase/": [
         {
-          text: "工作",
-          items: [
-            { text: "常用工具", link: "/work/" },
-            {
-              text: "博客",
-              items: [
-                { text: "rollup构建参数", link: "/work/blog/rollupOptions" },
-                { text: "跨域处理", link: "/work/blog/cors" },
-              ],
-            },
-          ],
+          text: "课例",
+          items: [{ text: "谋望", link: "/LiurenCase/谋望/case01.md" }],
+        },
+      ],
+      "/Bootstrap/": [
+        {
+          text: "排盘",
+          link: "/Bootstrap/index",
         },
       ],
       "/": [
         {
           text: "首页",
-          items: [{ text: "首页", link: "/" }],
+          link: "/",
         },
       ],
     },
-
     socialLinks: [
       {
         icon: "github",

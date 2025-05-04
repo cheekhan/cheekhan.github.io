@@ -1,5 +1,5 @@
 <script setup>
-import Case01 from '../../../components/LiurenCase/index.vue';
+import Case01 from '../../components/LiurenCase/index.vue';
 import data from "./data01"
 </script>
 

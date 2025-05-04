@@ -7,21 +7,18 @@ hero:
   tagline: 知识改变...改个der啊
   actions:
     - theme: brand
-      text: 了解一下我
+      text: 六壬知识
       link: /personal/index
     - theme: alt
-      text: 工作沉淀
-      link: /work/
+      text: 课例分析
+      link: /LiurenCase/
     - theme: alt
-      text: 基操演练
-      link: /cst/
-    - theme: alt
-      text: 玄之又玄
-      link: /personal/MindReader/base
+      text: 排盘
+      link: /Bootstrap/
 
 features:
-  - title: 野生程序员
-    details: 靠前端吃饭，会写点页面，爱好也比较广泛，喜欢琢磨东西，目前就算是啥都懂一点点，还在不断的积累中
-  - title: 坏消息是饭碗不保了
-    details: 不管是出于职业拓展，还是出于爱好，目前都在学习国学，希望以后能达到袖传一课的程度
+  - title: 六壬知识
+    details: 梳理出来的六壬知识
+  - title: 课例分析
+    details: 精选壬占汇选、六壬断案等案例
 ---
