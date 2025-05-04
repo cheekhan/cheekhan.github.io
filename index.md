@@ -3,27 +3,25 @@
 layout: home
 
 hero:
-  name: "cheekhan"
-  text: "大脑寄存处"
+  name: "Cheeckhan"
   tagline: 知识改变...改个der啊
   actions:
     - theme: brand
+      text: 了解一下我
+      link: /personal/index
+    - theme: alt
       text: 工作沉淀
       link: /work/
     - theme: alt
       text: 基操演练
       link: /cst/
     - theme: alt
-      text: 牛逼啊
+      text: 玄之又玄
       link: /personal/MindReader/base
-    - theme: alt
-      text: 看看我
-      link: /personal/index
 
 features:
-  - title: 我会个啥
-    details: 拿什么介绍自己，我这个菜逼
-  - title: 闭关修炼中
-    details: 等我好好沉淀一下
+  - title: 野生程序员
+    details: 靠前端吃饭，会写点页面，爱好也比较广泛，喜欢琢磨东西，目前就算是啥都懂一点点，还在不断的积累中
+  - title: 坏消息是饭碗不保了
+    details: 不管是出于职业拓展，还是出于爱好，目前都在学习国学，希望以后能达到袖传一课的程度
 ---
-
