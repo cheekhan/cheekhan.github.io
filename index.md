@@ -8,16 +8,13 @@ hero:
   actions:
     - theme: brand
       text: 了解一下我
-      link: /personal/index
+      link: /about
     - theme: alt
       text: 工作沉淀
-      link: /work/
+      link: /src/index
     - theme: alt
-      text: 基操演练
-      link: /cst/
-    - theme: alt
-      text: 玄之又玄
-      link: /personal/MindReader/base
+      text: 计算机体系
+      link: /src/CST体系
 
 features:
   - title: 野生程序员
