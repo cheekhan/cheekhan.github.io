@@ -39,11 +39,20 @@ export default defineConfig({
       "/liuyao/": [
         {
           text: "参考",
-          link: "/liuyao/index",
+          link: "/liuyao/参考",
         },
         {
-          text: "占法",
-          link: "/liuyao/占法",
+          text: "入门",
+          items: [
+            {
+              text: "点卦断卦",
+              link: "/liuyao/index",
+            },
+          ],
+        },
+        {
+          text: "案例",
+          items: [],
         },
       ],
       "/LiurenCase/": [
