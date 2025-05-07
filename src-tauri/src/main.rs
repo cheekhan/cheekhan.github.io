@@ -2,5 +2,5 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 fn main() {
-    curved_array_lib::run()
+    cheekhan_lib::run()
 }

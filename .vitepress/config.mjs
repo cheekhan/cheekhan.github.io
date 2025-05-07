@@ -90,4 +90,5 @@ export default defineConfig({
       infoLabel: "口诀：",
     },
   },
+  srcExclude:["./src-tauri"]
 });
