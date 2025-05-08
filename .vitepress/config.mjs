@@ -48,6 +48,10 @@ export default defineConfig({
               text: "点卦断卦",
               link: "/liuyao/index",
             },
+            {
+              text: "增删断案",
+              link: "/liuyao/分门别类",
+            },
           ],
         },
         {
@@ -90,5 +94,5 @@ export default defineConfig({
       infoLabel: "口诀：",
     },
   },
-  srcExclude:["./src-tauri"]
+  srcExclude: ["./src-tauri"],
 });
