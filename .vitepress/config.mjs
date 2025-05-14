@@ -49,6 +49,14 @@ export default defineConfig({
               link: "/liuyao/index",
             },
             {
+              text: "用神",
+              link: "/liuyao/用神",
+            },
+            {
+              text: "气理",
+              link: "/liuyao/气理",
+            },
+            {
               text: "增删断案",
               link: "/liuyao/分门别类",
             },
@@ -92,6 +100,10 @@ export default defineConfig({
   markdown: {
     container: {
       infoLabel: "口诀：",
+    },
+    toc: {
+      level: [1, 2, 3, 4],
+      shouldAllowNested: true,
     },
   },
   srcExclude: ["./src-tauri"],
