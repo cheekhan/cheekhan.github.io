@@ -58,7 +58,16 @@ export default defineConfig({
             },
             {
               text: "增删断案",
-              link: "/liuyao/分门别类",
+              collapsed: true,
+              items: [
+                { text: "博戏", link: "/liuyao/case/博戏" },
+                { text: "婚姻", link: "/liuyao/case/婚姻" },
+                { text: "家宅", link: "/liuyao/case/家宅" },
+                { text: "求财", link: "/liuyao/case/求财" },
+                { text: "天时", link: "/liuyao/case/天时" },
+                { text: "终身财福", link: "/liuyao/case/终身财福" },
+                { text: "终身功名", link: "/liuyao/case/终身功名" },
+              ],
             },
           ],
         },
