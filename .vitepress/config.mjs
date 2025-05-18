@@ -39,7 +39,10 @@ export default defineConfig({
       "/liuyao/": [
         {
           text: "参考",
-          link: "/liuyao/参考",
+          items: [
+            { text: "八宫全景", link: "/liuyao/参考" },
+            { text: "用神取象", link: "/liuyao/取象" },
+          ],
         },
         {
           text: "入门",
