@@ -76,7 +76,7 @@ export default defineConfig({
         },
         {
           text: "案例",
-          items: [],
+          items: [{ text: "2025-05-18", link: "/liuyao/note/20250518" }],
         },
       ],
       "/LiurenCase/": [
