@@ -6,44 +6,44 @@ import {
   shallowRef
 } from "./chunk-CQOUZRMK.js";
 
-// node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/index.js
-import "C:/Users/18840/Documents/GitHub/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/styles/fonts.css";
+// node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/index.js
+import "/Users/cheekhan/Documents/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/styles/fonts.css";
 
-// node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/without-fonts.js
-import "C:/Users/18840/Documents/GitHub/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/styles/vars.css";
-import "C:/Users/18840/Documents/GitHub/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/styles/base.css";
-import "C:/Users/18840/Documents/GitHub/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/styles/icons.css";
-import "C:/Users/18840/Documents/GitHub/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/styles/utils.css";
-import "C:/Users/18840/Documents/GitHub/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/styles/components/custom-block.css";
-import "C:/Users/18840/Documents/GitHub/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/styles/components/vp-code.css";
-import "C:/Users/18840/Documents/GitHub/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/styles/components/vp-code-group.css";
-import "C:/Users/18840/Documents/GitHub/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/styles/components/vp-doc.css";
-import "C:/Users/18840/Documents/GitHub/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/styles/components/vp-sponsor.css";
-import VPBadge from "C:/Users/18840/Documents/GitHub/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/components/VPBadge.vue";
-import Layout from "C:/Users/18840/Documents/GitHub/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/Layout.vue";
-import { default as default2 } from "C:/Users/18840/Documents/GitHub/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/components/VPBadge.vue";
-import { default as default3 } from "C:/Users/18840/Documents/GitHub/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/components/VPButton.vue";
-import { default as default4 } from "C:/Users/18840/Documents/GitHub/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/components/VPDocAsideSponsors.vue";
-import { default as default5 } from "C:/Users/18840/Documents/GitHub/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/components/VPFeatures.vue";
-import { default as default6 } from "C:/Users/18840/Documents/GitHub/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/components/VPHomeContent.vue";
-import { default as default7 } from "C:/Users/18840/Documents/GitHub/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/components/VPHomeFeatures.vue";
-import { default as default8 } from "C:/Users/18840/Documents/GitHub/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/components/VPHomeHero.vue";
-import { default as default9 } from "C:/Users/18840/Documents/GitHub/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/components/VPHomeSponsors.vue";
-import { default as default10 } from "C:/Users/18840/Documents/GitHub/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/components/VPImage.vue";
-import { default as default11 } from "C:/Users/18840/Documents/GitHub/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/components/VPLink.vue";
-import { default as default12 } from "C:/Users/18840/Documents/GitHub/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/components/VPNavBarSearch.vue";
-import { default as default13 } from "C:/Users/18840/Documents/GitHub/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/components/VPSocialLink.vue";
-import { default as default14 } from "C:/Users/18840/Documents/GitHub/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/components/VPSocialLinks.vue";
-import { default as default15 } from "C:/Users/18840/Documents/GitHub/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/components/VPSponsors.vue";
-import { default as default16 } from "C:/Users/18840/Documents/GitHub/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/components/VPTeamMembers.vue";
-import { default as default17 } from "C:/Users/18840/Documents/GitHub/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/components/VPTeamPage.vue";
-import { default as default18 } from "C:/Users/18840/Documents/GitHub/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/components/VPTeamPageSection.vue";
-import { default as default19 } from "C:/Users/18840/Documents/GitHub/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/components/VPTeamPageTitle.vue";
+// node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/without-fonts.js
+import "/Users/cheekhan/Documents/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/styles/vars.css";
+import "/Users/cheekhan/Documents/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/styles/base.css";
+import "/Users/cheekhan/Documents/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/styles/icons.css";
+import "/Users/cheekhan/Documents/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/styles/utils.css";
+import "/Users/cheekhan/Documents/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/styles/components/custom-block.css";
+import "/Users/cheekhan/Documents/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/styles/components/vp-code.css";
+import "/Users/cheekhan/Documents/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/styles/components/vp-code-group.css";
+import "/Users/cheekhan/Documents/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/styles/components/vp-doc.css";
+import "/Users/cheekhan/Documents/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/styles/components/vp-sponsor.css";
+import VPBadge from "/Users/cheekhan/Documents/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/components/VPBadge.vue";
+import Layout from "/Users/cheekhan/Documents/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/Layout.vue";
+import { default as default2 } from "/Users/cheekhan/Documents/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/components/VPBadge.vue";
+import { default as default3 } from "/Users/cheekhan/Documents/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/components/VPButton.vue";
+import { default as default4 } from "/Users/cheekhan/Documents/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/components/VPDocAsideSponsors.vue";
+import { default as default5 } from "/Users/cheekhan/Documents/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/components/VPFeatures.vue";
+import { default as default6 } from "/Users/cheekhan/Documents/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/components/VPHomeContent.vue";
+import { default as default7 } from "/Users/cheekhan/Documents/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/components/VPHomeFeatures.vue";
+import { default as default8 } from "/Users/cheekhan/Documents/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/components/VPHomeHero.vue";
+import { default as default9 } from "/Users/cheekhan/Documents/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/components/VPHomeSponsors.vue";
+import { default as default10 } from "/Users/cheekhan/Documents/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/components/VPImage.vue";
+import { default as default11 } from "/Users/cheekhan/Documents/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/components/VPLink.vue";
+import { default as default12 } from "/Users/cheekhan/Documents/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/components/VPNavBarSearch.vue";
+import { default as default13 } from "/Users/cheekhan/Documents/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/components/VPSocialLink.vue";
+import { default as default14 } from "/Users/cheekhan/Documents/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/components/VPSocialLinks.vue";
+import { default as default15 } from "/Users/cheekhan/Documents/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/components/VPSponsors.vue";
+import { default as default16 } from "/Users/cheekhan/Documents/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/components/VPTeamMembers.vue";
+import { default as default17 } from "/Users/cheekhan/Documents/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/components/VPTeamPage.vue";
+import { default as default18 } from "/Users/cheekhan/Documents/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/components/VPTeamPageSection.vue";
+import { default as default19 } from "/Users/cheekhan/Documents/cheekhan.github.io/node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/components/VPTeamPageTitle.vue";
 
-// node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/composables/layout.js
+// node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/composables/layout.js
 import { inBrowser, onContentUpdated, useRoute } from "vitepress";
 
-// node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/shared.js
+// node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/shared.js
 var UnpackStackView = Symbol("stack-view:unpack");
 function stackView(..._layers) {
   const layers = _layers.filter((layer) => isObject(layer));
@@ -83,14 +83,14 @@ function isObject(value) {
   return Object.prototype.toString.call(value) === "[object Object]";
 }
 
-// node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/support/utils.js
+// node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/support/utils.js
 import { withBase } from "vitepress";
 
-// node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/composables/data.js
+// node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/composables/data.js
 import { useData as useData$ } from "vitepress";
 var useData = useData$;
 
-// node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/support/sidebar.js
+// node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/support/sidebar.js
 function getSidebarGroups(sidebar2) {
   const groups = [];
   let lastGroupIndex = 0;
@@ -108,13 +108,13 @@ function getSidebarGroups(sidebar2) {
   return groups;
 }
 
-// node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/composables/outline.js
+// node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/composables/outline.js
 import { getScrollOffset } from "vitepress";
 
-// node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/composables/sidebar.js
+// node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/composables/sidebar.js
 var isOpen = ref(false);
 
-// node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/composables/layout.js
+// node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/composables/layout.js
 var headers = shallowRef([]);
 var sidebar = shallowRef([]);
 var is960 = shallowRef(false);
@@ -158,7 +158,7 @@ function useLayout() {
   };
 }
 
-// node_modules/.pnpm/vitepress@2.0.0-alpha.5_@al_32217321657c9b8dc5991a889a1633b1/node_modules/vitepress/dist/client/theme-default/without-fonts.js
+// node_modules/.pnpm/vitepress@2.0.0-alpha.5_@algolia+client-search@5.23.4_postcss@8.5.3_search-insights@2.17.3/node_modules/vitepress/dist/client/theme-default/without-fonts.js
 var theme = {
   Layout,
   enhanceApp: ({ app }) => {
