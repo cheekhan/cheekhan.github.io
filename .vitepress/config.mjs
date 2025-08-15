@@ -11,92 +11,79 @@ export default defineConfig({
         logo: "/icon.jpg",
         nav: [
             {text: "首页", link: "/"},
-            {text: "大六壬", link: "/personal/"},
-            {text: "六爻", link: "/liuyao/"},
-            {text: "课例", link: "/LiurenCase/"},
-            {text: "排盘", link: "/Bootstrap/"},
+            {text: "阴阳五行", link: "/阴阳五行/index"},
+            {text: "天干地支", link: "/天干地支/index"},
+            {text: "大六壬", link: "/大六壬/index"},
+            {text: "子平八字", link: "/子平八字/index"},
+            {text: "六爻", link: "/六爻/index"},
         ],
         // 侧边栏
+        /**
+         * {
+         *     text:''
+         *     link:"/路径"
+         *     items:[
+         *         { text:"",link:""}
+         *     ]
+         * }
+         */
         sidebar: {
-            "/personal/": [
+            "/阴阳五行/": [
                 {
-                    text: "个人介绍",
-                    link: "/personal/index",
+                    text:"阴阳",
+                    link:"/阴阳五行/阴阳"
                 },
                 {
-                    text: "六壬基础",
-                    items: [
-                        {text: "前置概念", link: "/personal/MindReader/base"},
-                        {text: "起课排传", link: "/personal/MindReader/setup"},
-                        {text: "九宗门", link: "/personal/MindReader/九宗门"},
-                        {text: "十二神", link: "/personal/MindReader/十二神"},
-                        {text: "十二将", link: "/personal/MindReader/十二天将"},
-                        {text: "十二长生", link: "/personal/MindReader/十二长生"},
-                        {text: "神煞", link: "/personal/MindReader/神煞"},
-                    ],
+                    text:"五行",
+                    link:"/阴阳五行/五行"
+                },
+                {
+                    text:"取象",
+                    link:"/阴阳五行/取象"
+                }
+            ],
+            "/天干地支/": [
+                {
+                    text:"天干",
+                    link:"/天干地支/天干"
+                },
+                {
+                    text:"地支",
+                    link:"/天干地支/地支"
+                },
+                {
+                    text:"干支纪年",
+                    link:"/天干地支/干支纪年"
+                },
+                {
+                    text:"四时五气",
+                    link:"/天干地支/四时五气"
+                },
+                {
+                    text:"十二长生",
+                    link:"/天干地支/十二长生"
                 },
             ],
-            "/liuyao/": [
+            "/大六壬/": [
                 {
-                    text: "参考",
-                    items: [
-                        {text: "八宫全景", link: "/liuyao/参考"},
-                        {text: "用神取象", link: "/liuyao/取象"},
-                    ],
+                    text:"介绍",
+                    link:"/大六壬/index"
                 },
                 {
-                    text: "入门",
-                    items: [
-                        {
-                            text: "点卦断卦",
-                            link: "/liuyao/index",
-                        },
-                        {
-                            text: "用神",
-                            link: "/liuyao/用神",
-                        },
-                        {
-                            text: "气理",
-                            link: "/liuyao/气理",
-                        },
-                        {
-                            text: "增删断案",
-                            collapsed: true,
-                            items: [
-                                {text: "博戏", link: "/liuyao/case/博戏"},
-                                {text: "婚姻", link: "/liuyao/case/婚姻"},
-                                {text: "家宅", link: "/liuyao/case/家宅"},
-                                {text: "求财", link: "/liuyao/case/求财"},
-                                {text: "天时", link: "/liuyao/case/天时"},
-                                {text: "终身财福", link: "/liuyao/case/终身财福"},
-                                {text: "终身功名", link: "/liuyao/case/终身功名"},
-                            ],
-                        },
-                    ],
+                    text:"起课",
+                    link:"/大六壬/起课"
                 },
                 {
-                    text: "案例",
-                    items: [{text: "2025-05-18", link: "/liuyao/note/20250518"}],
+                    text:"排传",
+                    link:"/大六壬/排传"
+                },
+                {
+                    text:"神煞",
+                    link:"/大六壬/神煞"
                 },
             ],
-            "/LiurenCase/": [
-                {
-                    text: "课例",
-                    items: [{text: "谋望", link: "/LiurenCase/谋望/case01.md"}],
-                },
-            ],
-            "/Bootstrap/": [
-                {
-                    text: "排盘",
-                    link: "/Bootstrap/index",
-                },
-            ],
-            "/": [
-                {
-                    text: "首页",
-                    link: "/",
-                },
-            ],
+            "/子平八字/": [],
+            "/六爻/": [],
         },
         socialLinks: [
             {

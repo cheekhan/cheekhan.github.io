@@ -5,37 +5,37 @@ const case_01 = {
   yao: [
     {
       type: "0", // 1世，2应，0无
-      yy: false, // 阴阳
+      yy: false, // 阴阳.md
       move: true, // 动爻
       lq: "子孙癸酉金", // 六亲
     },
     {
       type: "0", // 1世，2应，0无
-      yy: false, // 阴阳
+      yy: false, // 阴阳.md
       move: false, // 动爻
       lq: "妻财癸亥水", // 六亲
     },
     {
       type: "2", // 1世，2应，0无
-      yy: false, // 阴阳
+      yy: false, // 阴阳.md
       move: false, // 动爻
       lq: "兄弟癸丑土", // 六亲
     },
     {
       type: "0", // 1世，2应，0无
-      yy: false, // 阴阳
+      yy: false, // 阴阳.md
       move: false, // 动爻
       lq: "兄弟庚辰土", // 六亲
     },
     {
       type: "0", // 1世，2应，0无
-      yy: false, // 阴阳
+      yy: false, // 阴阳.md
       move: false, // 动爻
       lq: "官鬼庚寅木", // 六亲
     },
     {
       type: "1", // 1世，2应，0无
-      yy: false, // 阴阳
+      yy: false, // 阴阳.md
       move: false, // 动爻
       lq: "妻财庚子水", // 六亲
     },
@@ -43,32 +43,32 @@ const case_01 = {
   yao2: [
     {
       type: "0", // 1世，2应，0无
-      yy: true, // 阴阳
+      yy: true, // 阴阳.md
       lq: "官鬼丙寅木", // 六亲
     },
     {
       type: "0", // 1世，2应，0无
-      yy: false, // 阴阳
+      yy: false, // 阴阳.md
       lq: "妻财丙子水", // 六亲
     },
     {
       type: "1", // 1世，2应，0无
-      yy: false, // 阴阳
+      yy: false, // 阴阳.md
       lq: "兄弟丙戌土", // 六亲
     },
     {
       type: "0", // 1世，2应，0无
-      yy: false, // 阴阳
+      yy: false, // 阴阳.md
       lq: "兄弟庚辰土", // 六亲
     },
     {
       type: "0", // 1世，2应，0无
-      yy: false, // 阴阳
+      yy: false, // 阴阳.md
       lq: "官鬼庚寅木", // 六亲
     },
     {
       type: "1", // 1世，2应，0无
-      yy: false, // 阴阳
+      yy: false, // 阴阳.md
       lq: "妻财庚子水", // 六亲
     },
   ],
