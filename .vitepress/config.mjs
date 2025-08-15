@@ -1,122 +1,122 @@
-import { defineConfig } from "vitepress";
+import {defineConfig} from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: "/",
-  lang: "zh-CN",
-  title: "CheeKhan",
-  description: "cheekhan,占卜",
-  themeConfig: {
-    // 导航栏
-    logo: "/icon.jpg",
-    nav: [
-      { text: "首页", link: "/" },
-      { text: "大六壬", link: "/personal/" },
-      { text: "六爻", link: "/liuyao/" },
-      { text: "课例", link: "/LiurenCase/" },
-      { text: "排盘", link: "/Bootstrap/" },
-    ],
-    // 侧边栏
-    sidebar: {
-      "/personal/": [
-        {
-          text: "个人介绍",
-          link: "/personal/index",
+    base: "/",
+    lang: "zh-CN",
+    title: "CheeKhan",
+    description: "cheekhan,占卜",
+    themeConfig: {
+        // 导航栏
+        logo: "/icon.jpg",
+        nav: [
+            {text: "首页", link: "/"},
+            {text: "大六壬", link: "/personal/"},
+            {text: "六爻", link: "/liuyao/"},
+            {text: "课例", link: "/LiurenCase/"},
+            {text: "排盘", link: "/Bootstrap/"},
+        ],
+        // 侧边栏
+        sidebar: {
+            "/personal/": [
+                {
+                    text: "个人介绍",
+                    link: "/personal/index",
+                },
+                {
+                    text: "六壬基础",
+                    items: [
+                        {text: "前置概念", link: "/personal/MindReader/base"},
+                        {text: "起课排传", link: "/personal/MindReader/setup"},
+                        {text: "九宗门", link: "/personal/MindReader/九宗门"},
+                        {text: "十二神", link: "/personal/MindReader/十二神"},
+                        {text: "十二将", link: "/personal/MindReader/十二天将"},
+                        {text: "十二长生", link: "/personal/MindReader/十二长生"},
+                        {text: "神煞", link: "/personal/MindReader/神煞"},
+                    ],
+                },
+            ],
+            "/liuyao/": [
+                {
+                    text: "参考",
+                    items: [
+                        {text: "八宫全景", link: "/liuyao/参考"},
+                        {text: "用神取象", link: "/liuyao/取象"},
+                    ],
+                },
+                {
+                    text: "入门",
+                    items: [
+                        {
+                            text: "点卦断卦",
+                            link: "/liuyao/index",
+                        },
+                        {
+                            text: "用神",
+                            link: "/liuyao/用神",
+                        },
+                        {
+                            text: "气理",
+                            link: "/liuyao/气理",
+                        },
+                        {
+                            text: "增删断案",
+                            collapsed: true,
+                            items: [
+                                {text: "博戏", link: "/liuyao/case/博戏"},
+                                {text: "婚姻", link: "/liuyao/case/婚姻"},
+                                {text: "家宅", link: "/liuyao/case/家宅"},
+                                {text: "求财", link: "/liuyao/case/求财"},
+                                {text: "天时", link: "/liuyao/case/天时"},
+                                {text: "终身财福", link: "/liuyao/case/终身财福"},
+                                {text: "终身功名", link: "/liuyao/case/终身功名"},
+                            ],
+                        },
+                    ],
+                },
+                {
+                    text: "案例",
+                    items: [{text: "2025-05-18", link: "/liuyao/note/20250518"}],
+                },
+            ],
+            "/LiurenCase/": [
+                {
+                    text: "课例",
+                    items: [{text: "谋望", link: "/LiurenCase/谋望/case01.md"}],
+                },
+            ],
+            "/Bootstrap/": [
+                {
+                    text: "排盘",
+                    link: "/Bootstrap/index",
+                },
+            ],
+            "/": [
+                {
+                    text: "首页",
+                    link: "/",
+                },
+            ],
         },
-        {
-          text: "六壬基础",
-          items: [
-            { text: "前置概念", link: "/personal/MindReader/base" },
-            { text: "起课排传", link: "/personal/MindReader/setup" },
-            { text: "九宗门", link: "/personal/MindReader/九宗门" },
-            { text: "十二神", link: "/personal/MindReader/十二神" },
-            { text: "十二将", link: "/personal/MindReader/十二天将" },
-            { text: "十二长生", link: "/personal/MindReader/十二长生" },
-            { text: "神煞", link: "/personal/MindReader/神煞" },
-          ],
-        },
-      ],
-      "/liuyao/": [
-        {
-          text: "参考",
-          items: [
-            { text: "八宫全景", link: "/liuyao/参考" },
-            { text: "用神取象", link: "/liuyao/取象" },
-          ],
-        },
-        {
-          text: "入门",
-          items: [
+        socialLinks: [
             {
-              text: "点卦断卦",
-              link: "/liuyao/index",
+                icon: "github",
+                link: "https://github.com/cheekhan/cheekhan.github.io",
             },
-            {
-              text: "用神",
-              link: "/liuyao/用神",
-            },
-            {
-              text: "气理",
-              link: "/liuyao/气理",
-            },
-            {
-              text: "增删断案",
-              collapsed: true,
-              items: [
-                { text: "博戏", link: "/liuyao/case/博戏" },
-                { text: "婚姻", link: "/liuyao/case/婚姻" },
-                { text: "家宅", link: "/liuyao/case/家宅" },
-                { text: "求财", link: "/liuyao/case/求财" },
-                { text: "天时", link: "/liuyao/case/天时" },
-                { text: "终身财福", link: "/liuyao/case/终身财福" },
-                { text: "终身功名", link: "/liuyao/case/终身功名" },
-              ],
-            },
-          ],
+        ],
+        lastUpdated: true,
+        search: {
+            provider: "local",
         },
-        {
-          text: "案例",
-          items: [{ text: "2025-05-18", link: "/liuyao/note/20250518" }],
-        },
-      ],
-      "/LiurenCase/": [
-        {
-          text: "课例",
-          items: [{ text: "谋望", link: "/LiurenCase/谋望/case01.md" }],
-        },
-      ],
-      "/Bootstrap/": [
-        {
-          text: "排盘",
-          link: "/Bootstrap/index",
-        },
-      ],
-      "/": [
-        {
-          text: "首页",
-          link: "/",
-        },
-      ],
     },
-    socialLinks: [
-      {
-        icon: "github",
-        link: "https://github.com/cheekhan/cheekhan.github.io",
-      },
-    ],
-    lastUpdated: true,
-    search: {
-      provider: "local",
+    markdown: {
+        container: {
+            infoLabel: "口诀：",
+        },
+        toc: {
+            level: [1, 2, 3, 4],
+            shouldAllowNested: true,
+        },
     },
-  },
-  markdown: {
-    container: {
-      infoLabel: "口诀：",
-    },
-    toc: {
-      level: [1, 2, 3, 4],
-      shouldAllowNested: true,
-    },
-  },
-  srcExclude: ["./src-tauri"],
+    srcExclude: ["./src-tauri"],
 });
