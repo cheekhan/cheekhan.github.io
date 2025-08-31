@@ -1,4 +1,4 @@
-import {defineConfig} from "vitepress";
+import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -10,8 +10,8 @@ export default defineConfig({
         // 导航栏
         logo: "/icon.jpg",
         nav: [
-            {text: "首页", link: "/"},
-            {text: "指南", link: "/阴阳五行/index"},
+            { text: "首页", link: "/" },
+            { text: "指南", link: "/阴阳五行/index" },
             // {text: "天干地支", link: "/天干地支/index"},
             // {text: "大六壬", link: "/大六壬/index"},
             // {text: "子平八字", link: "/子平八字/index"},
@@ -105,6 +105,14 @@ export default defineConfig({
                         text: "十二天将",
                         link: "/大六壬/十二天将"
                     },
+                    {
+                        text: "案例",
+                        collapsed: true,
+                        items: [
+                            { text: "占省考", link: "/大六壬/案例/01-占省试" },
+                            { text: "占罢官", link: "/大六壬/案例/02-占罢官" }
+                        ]
+                    },
                 ]
             },
             {
@@ -123,6 +131,14 @@ export default defineConfig({
                         text: '介绍',
                         link: "/六爻/index",
                     },
+                ]
+            }, {
+                text: "杂谈",
+                items: [
+                    {
+                        text: "历法正朔",
+                        link: '/杂谈/01.历法正朔'
+                    }
                 ]
             }
         ],
