@@ -10,8 +10,8 @@ export default defineConfig({
         // 导航栏
         logo: "/icon.jpg",
         nav: [
-            { text: "首页", link: "/" },
-            { text: "指南", link: "/阴阳五行/index" },
+            { text: "决策稿", link: "/about" },
+            // { text: "指南", link: "/阴阳五行/index" },
             // {text: "天干地支", link: "/天干地支/index"},
             // {text: "大六壬", link: "/大六壬/index"},
             // {text: "子平八字", link: "/子平八字/index"},
@@ -29,118 +29,76 @@ export default defineConfig({
          */
         sidebar: [
             {
-                text: "阴阳五行",
+                text:"决策稿",
+                link:"/about"
+            },
+            {
+                text: "理学下的世界观",
                 items: [
                     {
-                        text: "介绍",
-                        link: "/阴阳五行/index"
+                        text: "造化",
+                        link: "/理学下的世界观/1、造化"
                     },
                     {
-                        text: "阴阳",
-                        link: "/阴阳五行/阴阳"
+                        text: "世界开始运转",
+                        link: "/理学下的世界观/2、世界开始运转"
+                    },
+                ]
+            },
+            {
+                text: "卜的基础",
+                items: [
+                    {
+                        text: '1、地支学的运算',
+                        link: "/卜的基础/1、地支学的运算",
                     },
                     {
-                        text: "五行",
-                        link: "/阴阳五行/五行"
-                    },
-                    {
-                        text: "取象",
-                        link: "/阴阳五行/取象"
+                        text: "2、气的流转",
+                        link: "/卜的基础/2、气的流转"
                     }
                 ]
             },
             {
-                text: "天干地支",
+                text: "大六壬初级",
                 items: [
                     {
-                        text: '介绍',
-                        link: "/天干地支/index",
+                        text: "1、起课",
+                        link: "/大六壬初级/1、起课"
                     },
                     {
-                        text: "天干",
-                        link: "/天干地支/天干"
+                        text: "2、九宗门概述",
+                        link: "/大六壬初级/2、九宗门概述"
                     },
                     {
-                        text: "地支",
-                        link: "/天干地支/地支"
+                        text: "3、起课参考",
+                        link: "/大六壬初级/3、起课参考"
                     },
                     {
-                        text: "干支纪年",
-                        link: "/天干地支/干支纪年"
-                    },
-                    {
-                        text: "四时五气",
-                        link: "/天干地支/四时五气"
-                    },
-                    {
-                        text: "十二长生",
-                        link: "/天干地支/十二长生"
-                    },
-                ]
-            },
-            {
-                text: "大六壬",
-                items: [
-                    {
-                        text: "介绍",
-                        link: "/大六壬/index"
-                    },
-                    {
-                        text: "起课",
-                        link: "/大六壬/起课"
-                    },
-                    {
-                        text: "排传",
-                        link: "/大六壬/排传"
-                    },
-                    {
-                        text: "神煞",
-                        link: "/大六壬/神煞"
-                    },
-                    {
-                        text: "十二天神",
-                        link: "/大六壬/十二天神"
-                    },
-                    {
-                        text: "十二天将",
-                        link: "/大六壬/十二天将"
-                    },
-                    {
-                        text: "案例",
+                        text: "4、 十二天神",
                         collapsed: true,
+                        // link: "/大六壬初级/4、 十二天神"
                         items: [
-                            { text: "占省考", link: "/大六壬/案例/01-占省试" },
-                            { text: "占罢官", link: "/大六壬/案例/02-占罢官" }
+                            { text: "亥", link: "/大六壬初级/4-1、亥" },
                         ]
                     },
-                ]
-            },
-            {
-                text: '子平八字',
-                items: [
                     {
-                        text: '介绍',
-                        link: "/子平八字/index",
+                        text: "5、 十二天将",
+                        collapsed: true,
+                        // link: "/大六壬初级/4、 十二天神"
+                        items: [
+                            { text: "贵人", link: "/大六壬初级/5-1、贵人" },
+                        ]
+                    },
+                    {
+                        text: "6、神煞",
+                        link: "/大六壬初级/6、神煞"
+                    },
+                    {
+                        text: "7、十二长生",
+                        link: "/大六壬初级/7、十二长生"
                     },
                 ]
             },
-            {
-                text: "六爻",
-                items: [
-                    {
-                        text: '介绍',
-                        link: "/六爻/index",
-                    },
-                ]
-            }, {
-                text: "杂谈",
-                items: [
-                    {
-                        text: "历法正朔",
-                        link: '/杂谈/01.历法正朔'
-                    }
-                ]
-            }
         ],
         socialLinks: [
             {

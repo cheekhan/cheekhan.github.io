@@ -3,18 +3,18 @@
 layout: home
 
 hero:
-  name: "Cheeckhan"
-  tagline: 知识改变...改个der啊
+  name: "决策稿"
+  tagline: 掐指一算，袖里乾坤
   actions:
     - theme: brand
-      text: 六壬知识
-      link: /personal/index
+      text: 课经
+      link: /lll
     - theme: alt
-      text: 课例分析
-      link: /LiurenCase/
+      text: 毕法赋
+      link: /lll
     - theme: alt
-      text: 排盘
-      link: /Bootstrap/
+      text: 案例
+      link: /lll
 
 features:
   - title: 六壬知识
