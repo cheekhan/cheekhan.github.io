@@ -8,13 +8,16 @@ hero:
   actions:
     - theme: brand
       text: 课经
-      link: /lll
+      link: /课经
     - theme: alt
       text: 毕法赋
-      link: /lll
+      link: /毕法赋
     - theme: alt
-      text: 案例
-      link: /lll
+      text: 课盘分析
+      link: /
+    - theme: alt
+      text: 自占记录
+      link: /
 
 features:
   - title: 六壬知识
