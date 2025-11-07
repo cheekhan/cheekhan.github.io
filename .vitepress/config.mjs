@@ -29,8 +29,8 @@ export default defineConfig({
          */
         sidebar: [
             {
-                text:"决策稿",
-                link:"/about"
+                text: "决策稿",
+                link: "/about"
             },
             {
                 text: "理学下的世界观",
@@ -79,6 +79,17 @@ export default defineConfig({
                         // link: "/大六壬初级/4、 十二天神"
                         items: [
                             { text: "亥", link: "/大六壬初级/4-1、亥" },
+                            { text: "戌", link: "/大六壬初级/4-2、戌" },
+                            { text: "酉", link: "/大六壬初级/4-3、酉" },
+                            { text: "申", link: "/大六壬初级/4-4、申" },
+                            { text: "未", link: "/大六壬初级/4-5、未" },
+                            { text: "午", link: "/大六壬初级/4-6、午" },
+                            { text: "巳", link: "/大六壬初级/4-7、巳" },
+                            { text: "辰", link: "/大六壬初级/4-8、辰" },
+                            { text: "卯", link: "/大六壬初级/4-9、卯" },
+                            { text: "寅", link: "/大六壬初级/4-10、寅" },
+                            { text: "丑", link: "/大六壬初级/4-11、丑" },
+                            { text: "子", link: "/大六壬初级/4-12、子" },
                         ]
                     },
                     {
@@ -87,6 +98,17 @@ export default defineConfig({
                         // link: "/大六壬初级/4、 十二天神"
                         items: [
                             { text: "贵人", link: "/大六壬初级/5-1、贵人" },
+                            { text: "螣蛇", link: "/大六壬初级/5-2、螣蛇" },
+                            { text: "朱雀", link: "/大六壬初级/5-3、朱雀" },
+                            { text: "六合", link: "/大六壬初级/5-4、六合" },
+                            { text: "勾陈", link: "/大六壬初级/5-5、勾陈" },
+                            { text: "青龙", link: "/大六壬初级/5-6、青龙" },
+                            { text: "天空", link: "/大六壬初级/5-7、天空" },
+                            { text: "白虎", link: "/大六壬初级/5-8、白虎" },
+                            { text: "太常", link: "/大六壬初级/5-9、太常" },
+                            { text: "玄武", link: "/大六壬初级/5-10、玄武" },
+                            { text: "太阴", link: "/大六壬初级/5-11、太阴" },
+                            { text: "天后", link: "/大六壬初级/5-12、天后" },
                         ]
                     },
                     {
