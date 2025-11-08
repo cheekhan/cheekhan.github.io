@@ -1,0 +1,26 @@
+{
+  "name": "vite-plugins",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "files": [
+    "lib",
+    "index.d.ts"
+  ],
+  "main": "./lib/counter.umd.cjs",
+  "module": "./lib/counter.js",
+  "types": "./index.d.ts",
+  "exports": {
+    "types": "./index.d.ts",
+    "import": "./lib/counter.js",
+    "require": "./lib/counter.umd.cjs"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build"
+  },
+  "devDependencies": {
+    "typescript": "~5.9.2",
+    "vite": "^7.1.5"
+  }
+}

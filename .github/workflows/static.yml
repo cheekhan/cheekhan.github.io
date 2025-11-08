@@ -21,11 +21,11 @@ jobs:
           node-version: 20
       - run: npm install -g pnpm
       - run: pnpm install
-      - run: pnpm run build
+      - run: pnpm run docs:build
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .vitepress/dist
+          path: docs/.vitepress/dist
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
