@@ -2,7 +2,7 @@ import { defineConfig } from "vitepress";
 import { withPwa } from '@vite-pwa/vitepress'
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default withPwa(defineConfig({
     base: "/",
     lang: "zh-CN",
     title: "CheeKhan",
@@ -12,22 +12,7 @@ export default defineConfig({
         logo: "/icon.jpg",
         nav: [
             { text: "决策稿", link: "/about" },
-            // { text: "指南", link: "/阴阳五行/index" },
-            // {text: "天干地支", link: "/天干地支/index"},
-            // {text: "大六壬", link: "/大六壬/index"},
-            // {text: "子平八字", link: "/子平八字/index"},
-            // {text: "六爻", link: "/六爻/index"},
         ],
-        // 侧边栏
-        /**
-         * {
-         *     text:''
-         *     link:"/路径"
-         *     items:[
-         *         { text:"",link:""}
-         *     ]
-         * }
-         */
         sidebar: [
             {
                 text: "决策稿",
@@ -184,24 +169,13 @@ export default defineConfig({
             provider: "local",
         },
     },
-    markdown: {
-        container: {
-            infoLabel: "口诀：",
-        },
-        toc: {
-            level: [1, 2, 3, 4],
-            shouldAllowNested: true,
-        },
-    },
-    srcExclude: ["./src-tauri"],
-    // PWA 配置区，重点来了！
     pwa: {
+        // PWA 配置区，重点来了！
         base: '/',
         scope: '/',
-        includeAssets: ['favicon.ico', 'logo.png', 'images/**/*'], // 告诉插件，这些静态资源要缓存起来
+        includeAssets: ['favicon.ico', 'logo.jpg', 'images/**/*'], // 告诉插件，这些静态资源要缓存起来
         registerType: 'prompt', // 有更新别偷偷刷新，得问问我（用户）同不同意
         injectRegister: 'auto',
-
         // 开发环境专用，关掉烦人的警告
         devOptions: {
             enabled: true,
@@ -209,7 +183,6 @@ export default defineConfig({
             navigateFallback: '/',
             type: 'module'
         },
-
         // Service Worker 配置，缓存策略的灵魂
         workbox: {
             globPatterns: ['**/*.{js,css,html,ico,png,jpg,jpeg,gif,svg,woff2}'], // 需要缓存哪些类型的文件
@@ -247,36 +220,27 @@ export default defineConfig({
                 // 注意：JS/CSS/HTML Workbox默认会处理，通常用 StaleWhileRevalidate 策略（缓存优先，后台更新）
             ]
         },
-
-        // App清单，告诉系统“我是个App！”
         manifest: {
+            id: "cheekhan",
             name: '决策稿', // 完整名
             short_name: '决策稿', // 桌面图标下面显示的短名，太长显示不全
             description: 'cheekhan 的决策稿',
             theme_color: '#ffffff', // 主题色，影响状态栏、启动画面背景
             background_color: '#ffffff', // 启动画面背景色
-            display: 'standalone', // 独立显示模式（全屏，无浏览器UI）
-            orientation: 'portrait', // 默认竖屏
-            scope: '/', // PWA能管哪些页面
+            display: 'standalone', // 独立显示模式（全屏，无浏览器UI） 
             start_url: '/', // 点开图标从哪开始
-            // icons: [ // 图标！重中之重！
-            //     {
-            //         src: '/logo.png',
-            //         sizes: '192x192',
-            //         type: 'image/png'
-            //     },
-            //     {
-            //         src: '/logo.png',
-            //         sizes: '512x512',
-            //         type: 'image/png'
-            //     },
-            //     {
-            //         src: '/logo.png',
-            //         sizes: '512x512',
-            //         type: 'image/png',
-            //         purpose: 'any maskable' // 这个重要！告诉系统这图标能被裁剪成各种形状（圆的、方的）
-            //     }
-            // ]
+            icons: [ // 图标！重中之重！
+                {
+                    src: '/logo-192.png',
+                    sizes: '192x192',
+                    type: 'image/png'
+                },
+                {
+                    src: '/logo-512.png',
+                    sizes: '512x512',
+                    type: 'image/png'
+                },
+            ]
         }
     }
-});
+}))

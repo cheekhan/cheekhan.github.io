@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "vitepress dev --port 1420",
-    "build": "vitepress build --outDir dist",
-    "preview": "vitepress preview"
+    "build": "vitepress build",
+    "preview": "vite preview"
   },
   "keywords": [],
   "author": "",
