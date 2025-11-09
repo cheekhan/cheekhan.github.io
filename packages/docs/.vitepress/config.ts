@@ -9,7 +9,7 @@ export default withPwa(defineConfig({
     description: "cheekhan,占卜",
     themeConfig: {
         // 导航栏
-        logo: "/public/icon.jpg",
+        logo: "/icon.jpg",
         nav: [
             {text: "决策稿", link: "/about"},
         ],
@@ -241,12 +241,12 @@ export default withPwa(defineConfig({
             start_url: '/', // 点开图标从哪开始
             icons: [ // 图标！重中之重！
                 {
-                    src: '/public/logo-192.png',
+                    src: '/logo-192.png',
                     sizes: '192x192',
                     type: 'image/png'
                 },
                 {
-                    src: '/public/logo-512.png',
+                    src: '/logo-512.png',
                     sizes: '512x512',
                     type: 'image/png'
                 },
