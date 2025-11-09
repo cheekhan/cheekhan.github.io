@@ -12,13 +12,17 @@
     "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
-    "vue": "catalog:"
+    "element-plus": "^2.11.7",
+    "vue": "catalog:",
+    "vue-router": "^4.6.3"
   },
   "devDependencies": {
     "@types/node": "catalog:",
     "@vitejs/plugin-vue": "catalog:",
     "@vue/tsconfig": "catalog:",
     "typescript": "catalog:",
+    "unplugin-auto-import": "^20.2.0",
+    "unplugin-vue-components": "^30.0.0",
     "vite": "catalog:",
     "vitepress": "^1.6.4",
     "vue-tsc": "catalog:"
