@@ -1,0 +1,17 @@
+{
+  "name": "@cheekhan/utils",
+  "private": false,
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cheekhan/cheekhan.github.io.git"
+  },
+  "devDependencies": {
+    "typescript": "catalog:",
+    "vite": "catalog:"
+  }
+}
