@@ -235,8 +235,8 @@ export default withPwa(defineConfig({
             name: '决策稿', // 完整名
             short_name: '决策稿', // 桌面图标下面显示的短名，太长显示不全
             description: 'cheekhan 的决策稿',
-            theme_color: '#ffffff', // 主题色，影响状态栏、启动画面背景
-            background_color: '#ffffff', // 启动画面背景色
+            theme_color: '##1a1c1e', // 主题色，影响状态栏、启动画面背景
+            background_color: '##1a1c1e', // 启动画面背景色
             display: 'standalone', // 独立显示模式（全屏，无浏览器UI）
             start_url: '/', // 点开图标从哪开始
             icons: [ // 图标！重中之重！
