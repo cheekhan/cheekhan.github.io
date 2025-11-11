@@ -1,4 +1,7 @@
-import stems, { HeavenlyStem, useTianganList, StemJia, StemBing, StemWu, StemGeng, StemRen } from "./tianGan"
+import stems, {
+    HeavenlyStem, useTianganList,
+    StemJia, StemBing, StemWu, StemGeng, StemRen,
+} from "./tianGan"
 import branches, { EarthlyBranch } from "./diZhi"
 import { findNext, linkRoot, JiaziLinkType } from "./utils"
 /**
@@ -88,6 +91,9 @@ export function useYmdhInfo(date?: string): {
             return true
         }
     })
+    // 年上起月
+    // TODO 需要配置月建的换气表，然后进行计算
+
     // 计算日期差，得到日柱
     const dayStart = new Date('2025-01-29T23:59:59+08:00')
     dayInfo = findNext(dayGanzhiIndex[0], dayGanzhiIndex[1], Math.ceil((current.getTime() - dayStart.getTime()) / (1000 * 60 * 60 * 24)))
@@ -148,6 +154,30 @@ function _dayToHour(d: JiaziLinkType) {
     // - 丙、辛：当日子时为戊
     // - 丁、壬：当日子时为庚
     // - 戊、癸：当日子时为壬
+    let arr: Array<HeavenlyStem> = []
+    if (d.data[0].value === '甲' || d.data[0].value === '己') {
+        arr = useTianganList(new StemJia())
+    } else if (d.data[0].value === '乙' || d.data[0].value === '庚') {
+        arr = useTianganList(new StemBing())
+    } else if (d.data[0].value === '丙' || d.data[0].value === '辛') {
+        arr = useTianganList(new StemWu())
+    } else if (d.data[0].value === '丁' || d.data[0].value === '壬') {
+        arr = useTianganList(new StemGeng())
+    } else if (d.data[0].value === '戊' || d.data[0].value === '癸') {
+        arr = useTianganList(new StemRen())
+    } else {
+        throw new Error(`日干判断错误：${d.data[0].value}`)
+    }
+    arr.push(arr[0], arr[1])
+    return arr
+}
+/** 年上起月 */
+function _yearToMonth(d: JiaziLinkType) {
+    // - 甲、己：寅月的干是丙，依次往下数，卯月是丁
+    // - 乙、庚：寅月的干是戊
+    // - 丙、辛：寅月干为庚
+    // - 丁、壬：寅月干为壬
+    // - 戊、癸：寅月干为甲
     let arr: Array<HeavenlyStem> = []
     if (d.data[0].value === '甲' || d.data[0].value === '己') {
         arr = useTianganList(new StemJia())

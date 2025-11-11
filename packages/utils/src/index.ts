@@ -1,5 +1,6 @@
 import * as ganzhi from "./ganZhi"
 
-export default {
+export {
     ganzhi
 }
+
