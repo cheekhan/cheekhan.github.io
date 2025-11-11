@@ -1,4 +1,4 @@
-import {YinYang, WuXing, ShengKe, ZhiName} from "./types"
+import { YinYang, WuXing, ShengKe, ZhiName } from "./types"
 
 /**
  * 地支：
@@ -575,7 +575,7 @@ export class BranchHai extends EarthlyBranch {
     }
 }
 
-export {EarthlyBranch};
+export { EarthlyBranch };
 
 export default [
     new BranchZi(),
@@ -591,4 +591,25 @@ export default [
     new BranchXu(),
     new BranchHai(),
 ];
+
+/** 获取没有副作用的数组 */
+export function useDizhiList(start?: EarthlyBranch) {
+    const _arr = [
+        new BranchZi(),
+        new BranchChou(),
+        new BranchYin(),
+        new BranchMao(),
+        new BranchChen(),
+        new BranchSi(),
+        new BranchWu(),
+        new BranchWei(),
+        new BranchShen(),
+        new BranchYou(),
+        new BranchXu(),
+        new BranchHai(),
+    ]
+    const step = (start?.id || 1) - 1; // 默认从子开始
+    const end = _arr.splice(0, step)
+    return [..._arr, ...end]
+}
 

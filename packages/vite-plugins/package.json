@@ -1,5 +1,5 @@
 {
-  "name": "vite-plugins",
+  "name": "@cheekhan/vite-plugins",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,12 +8,12 @@
     "index.d.ts"
   ],
   "main": "./lib/counter.umd.cjs",
-  "module": "./lib/counter.js",
+  "module": "./lib/index.js",
   "types": "./index.d.ts",
   "exports": {
     "types": "./index.d.ts",
-    "import": "./lib/counter.js",
-    "require": "./lib/counter.umd.cjs"
+    "import": "./lib/index.js",
+    "require": "./lib/index.umd.cjs"
   },
   "scripts": {
     "dev": "vite",

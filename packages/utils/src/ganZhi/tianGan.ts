@@ -1,4 +1,4 @@
-import {YinYang, WuXing, ShengKe, GanName} from "./types"
+import { YinYang, WuXing, ShengKe, GanName } from "./types"
 
 
 /**
@@ -19,7 +19,7 @@ export abstract class HeavenlyStem {
     static wuXingRel(src: WuXing, tar: WuXing): ShengKe {
         type relationMap = Record<WuXing, Record<WuXing, ShengKe>>;
         const relMap: relationMap = {
-//ShengKe.Sheng | ShengKe.Ke | ShengKe.BeiSheng | ShengKe.BeiKe | ShengKe.BiHe;
+            //ShengKe.Sheng | ShengKe.Ke | ShengKe.BeiSheng | ShengKe.BeiKe | ShengKe.BiHe;
             [WuXing.Jin]: {
                 [WuXing.Jin]: ShengKe.BiHe,
                 [WuXing.Shui]: ShengKe.Sheng,
@@ -182,3 +182,23 @@ export default [
     new StemRen(),
     new StemGui(),
 ]
+
+/** 获取没有副作用的数组 */
+export function useTianganList(start?: HeavenlyStem) {
+    const _arr = [
+        new StemJia(),
+        new StemYi(),
+        new StemBing(),
+        new StemDing(),
+        new StemWu(),
+        new StemJi(),
+        new StemGeng(),
+        new StemXin(),
+        new StemRen(),
+        new StemGui(),
+    ]
+    const step = (start?.id || 1) - 1; // 默认从甲开始
+    const end = _arr.splice(0, step)
+    return [..._arr, ...end]
+}
+
