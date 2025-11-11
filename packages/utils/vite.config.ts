@@ -1,5 +1,5 @@
+/// <reference types="vitest/config" />
 import { defineConfig } from 'vite'
-// import types from 'vite-plugin-lib-types';
 
 
 export default defineConfig({
@@ -14,4 +14,5 @@ export default defineConfig({
             formats: ['es']
         },
     },
+    test: {}
 })
