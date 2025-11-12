@@ -1,18 +1,12 @@
 {
   "name": "@cheekhan/docs",
-  "version": "1.0.0",
-  "description": "",
-  "type": "module",
-  "main": "index.js",
+  "version": "1.0.0", 
+  "type": "module", 
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",
     "preview": "vitepress preview"
-  },
-  "keywords": [],
-  "author": "cheekhan",
-  "license": "ISC",
-  "packageManager": "pnpm@10.14.0",
+  },  
   "devDependencies": {
     "@vite-pwa/vitepress": "^1.0.1",
     "vitepress": "^1.6.4"

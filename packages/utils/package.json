@@ -1,8 +1,7 @@
 {
   "name": "@cheekhan/utils",
   "private": false,
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.0", 
   "files": [
     "lib",
     "index.d.ts"
@@ -18,11 +17,7 @@
     "dev": "vite",
     "build": "vite build",
     "test": "vitest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/cheekhan/cheekhan.github.io.git"
-  },
+  }, 
   "devDependencies": {
     "typescript": "catalog:",
     "vite": "catalog:",

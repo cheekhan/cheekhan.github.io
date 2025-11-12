@@ -1,17 +1,13 @@
 {
     "name": "@cheekhan/dbky",
+    "private": false,
     "version": "0.0.3",
-    "description": "",
     "bin": {
         "dbky": "dist/bin"
     },
     "scripts": {
         "build": "rollup -c"
     },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "packageManager": "pnpm@10.13.0",
     "dependencies": {
         "commander": "^14.0.0"
     },

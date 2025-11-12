@@ -1,15 +1,19 @@
-# Vue 3 + TypeScript + Vite
+# Cheekhan 工程
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## monorepo 工程说明
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+dbky：工作使用的小工具
 
+docs：玄学文档
 
+front：前端工程
 
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+utils：工具函数
 
+vite-plugins：自己使用的小插件
 
-    "vitepress": "^1.6.4",
-"@vite-pwa/vitepress": "^1.0.1",
+## 其他说明
+
+nodejs 版本：22
+
+pnpm 版本：10

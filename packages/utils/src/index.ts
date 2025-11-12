@@ -1,6 +1,3 @@
-import * as ganzhi from "./ganZhi"
+import * as ganzhi from "./ganZhi";
 
-export {
-    ganzhi
-}
-
+export { ganzhi };

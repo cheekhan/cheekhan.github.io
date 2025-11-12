@@ -2,18 +2,12 @@
   "name": "@cheekhan/main",
   "private": true,
   "version": "1.0.0",
-  "type": "module",
-  "description": "",
-  "main": "index.js",
+  "type": "module", 
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview"
-  },
-  "keywords": [],
-  "author": "cheekhan",
-  "license": "ISC",
-  "packageManager": "pnpm@10.14.0",
+  }, 
   "dependencies": {
     "@cheekhan/utils": "workspace:^",
     "element-plus": "^2.11.7",
