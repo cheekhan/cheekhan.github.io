@@ -2,14 +2,15 @@
   "name": "@cheekhan/main",
   "private": true,
   "version": "1.0.0",
-  "type": "module", 
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview"
-  }, 
+  },
   "dependencies": {
     "@cheekhan/utils": "workspace:^",
+    "d3": "^7.9.0",
     "element-plus": "^2.11.7",
     "vue": "catalog:",
     "vue-router": "^4.6.3"

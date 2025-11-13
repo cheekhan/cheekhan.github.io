@@ -1,7 +1,7 @@
 <script setup lang="ts">
- </script>
+  import LayoutIndex from "./components/Layout/Index.vue";
+</script>
 
 <template>
-<h3>dddd</h3>
+  <LayoutIndex />
 </template>
-
