@@ -1,0 +1,49 @@
+{
+  "include": ["src/**/*"],
+  "exclude": ["test/**/*", "node_modules", "lib"],
+  "compilerOptions": {
+    "rootDir": "./",
+    "outDir": "./lib",
+    "sourceMap": true, // 生成 sourcemap 文件[citation:6]
+    "module": "esnext", // 模块系统，是import还是Commonjs
+    "moduleResolution": "node",
+    "target": "esnext", // 编译后js版本
+    "lib": ["ESNext", "DOM"],
+    "strict": true, // 启用所有严格类型检查[citation:6]
+    "skipLibCheck": true // 跳过声明文件类型检查[citation:5]
+
+    // Environment Settings
+    // See also https://aka.ms/tsconfig/module
+    // "types": [],
+    // For nodejs:
+    // "lib": ["esnext"],
+    // "types": ["node"],
+    // and npm install -D @types/node
+
+    // Other Outputs
+    // "sourceMap": true,
+    // "declaration": true,
+    // "declarationMap": true,
+
+    // Stricter Typechecking Options
+    // "noUncheckedIndexedAccess": true,
+    // "exactOptionalPropertyTypes": true,
+
+    // Style Options
+    // "noImplicitReturns": true,
+    // "noImplicitOverride": true,
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": true,
+    // "noFallthroughCasesInSwitch": true,
+    // "noPropertyAccessFromIndexSignature": true,
+
+    // Recommended Options
+    // "strict": true,
+    // "jsx": "react-jsx",
+    // "verbatimModuleSyntax": true,
+    // "isolatedModules": true,
+    // "noUncheckedSideEffectImports": true,
+    // "moduleDetection": "force",
+    // "skipLibCheck": true
+  }
+}
