@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import LayoutBar from "./LayoutBar.vue";
   import LayoutMenu from "./LayoutMenu.vue";
+  import { RouterView } from "vue-router";
   defineOptions({
     name: "LayoutIndex",
   });
@@ -13,7 +14,7 @@
     </el-aside>
     <el-container>
       <el-header><LayoutBar /></el-header>
-      <el-main><div class="radiu-cover">核心</div></el-main>
+      <el-main><RouterView /></el-main>
     </el-container>
   </el-container>
 </template>

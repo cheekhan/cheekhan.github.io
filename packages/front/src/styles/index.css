@@ -3,12 +3,18 @@
 :root {
   /* 背景色 */
   --bg-dark-base: #161618; /* 基础背景色 ，最深*/
-  --bg-dark-light: #202127; /* 最浅的背景色，用于浮窗、提示等*/
   --bg-dark-normal: #1b1b1f; /* 大范围的容器背景色*/
+  --bg-dark-light: #202127; /* 最浅的背景色，用于浮窗、提示等*/
   /* 文字色 */
   --font-color-normal: #dfdfd6; /*通用的文字颜色*/
   --font-color-title: #98989f; /*辅助性的文字*/
   --font-color-active: #9499ff; /*激活的文字*/
+  /* 五行颜色 */
+  --wx-jin: #909399;
+  --wx-shui: rgb(42, 89, 138);
+  --wx-mu: rgb(78, 142, 47);
+  --wx-huo: #f56c6c;
+  --wx-tu: rgb(167, 119, 48);
 }
 
 /* 圆角、通用背景色的块 */
@@ -21,4 +27,18 @@
 .full-block {
   width: 100%;
   height: 100%;
+}
+
+/* flex 布局相关 */
+
+.flex-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-start {
+  justify-content: flex-start;
 }
