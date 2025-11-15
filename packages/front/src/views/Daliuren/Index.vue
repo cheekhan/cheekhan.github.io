@@ -127,6 +127,7 @@ onMounted(() => container.value ? pan.value = new UsePan(container.value) : 0)
     width: 493px;
     height: 493px;
     margin-left: 20px;
+    background-color: #1D1E1F;
     border:2px solid #363637;
   }
 }
