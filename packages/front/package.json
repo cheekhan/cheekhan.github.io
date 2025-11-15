@@ -11,12 +11,13 @@
   "dependencies": {
     "@cheekhan/utils": "workspace:^",
     "d3": "^7.9.0",
+    "dayjs": "catalog:",
     "element-plus": "^2.11.7",
     "vue": "catalog:",
-    "vue-router": "^4.6.3",
-    "dayjs": "catalog:"
+    "vue-router": "^4.6.3"
   },
   "devDependencies": {
+    "@types/d3": "^7.4.3",
     "@types/node": "catalog:",
     "@vitejs/plugin-vue": "catalog:",
     "@vue/tsconfig": "catalog:",
