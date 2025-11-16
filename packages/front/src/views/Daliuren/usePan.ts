@@ -1,10 +1,10 @@
 import {select, arc, type Selection, type BaseType} from "d3"
-import {ganzhi} from "@cheekhan/utils"
+import {GanZhi} from "@cheekhan/utils"
 
 // d3 select 方法常见的返回类型
 export type D3SelectElement<T extends BaseType> = Selection<T, unknown, null, undefined>
 
-const dizhiList = ganzhi.useDizhiList()
+const diZhiList = GanZhi.useDizhiList()
 /**
  * 定义颜色常量
  */
@@ -24,6 +24,7 @@ export class UsePan {
     private tianGroup: D3SelectElement<SVGGElement>;
     private jiangGroup: D3SelectElement<SVGGElement>;
     private infoGroup: D3SelectElement<SVGGElement>;
+    private _handleClick: () => void = () => console.log("起课")
 
     /**
      * 挂载 svg 的容器元素
@@ -31,32 +32,25 @@ export class UsePan {
      */
     constructor(container: HTMLElement) {
         this.container = container;
-        this.init()
-        this.useDipan()
+        // svg容器
+        this.svg = select(this.container).append("svg");
+        this.svg.attr("width", this.width)
+            .attr("height", this.height)
+            .attr(`viewBox`, `0 0 ${this.width} ${this.height}`);
+        const cx = this.width * 0.5
+        const cy = this.height * 0.5
+        // 其他盘的容器
+        this.diGroup = this.svg.append("g")
+        this.tianGroup = this.svg.append("g").attr("transform", `translate(${cx},${cy})`);
+        this.jiangGroup = this.svg.append("g").attr("transform", `translate(${cx},${cy})`);
+        this.infoGroup = this.svg.append("g").attr("transform", `translate(${cx},${cy})`);
+        this.useDi()
         this.useTian()
         this.useJiang()
         this.action()
     }
 
-    private init() {
-        const svg: D3SelectElement<SVGSVGElement> = select(this.container).append("svg");
-        svg.attr("width", this.width)
-            .attr("height", this.height)
-            .attr(`viewBox`, `0 0 ${this.width} ${this.height}`);
-        const cx = this.width * 0.5
-        const cy = this.height * 0.5
-        const diGroup = svg.append("g")
-        const tianGroup = svg.append("g").attr("transform", `translate(${cx},${cy})`);
-        const jiangGroup = svg.append("g").attr("transform", `translate(${cx},${cy})`);
-        const infoGroup = svg.append("g").attr("transform", `translate(${cx},${cy})`);
-        this.svg = svg;
-        this.diGroup = diGroup;
-        this.tianGroup = tianGroup;
-        this.jiangGroup = jiangGroup;
-        this.infoGroup = infoGroup;
-    }
-
-    private useDipan() {
+    private useDi() {
         // 线，分格间距
         const xScale = 164.3
         // 两个对角
@@ -178,15 +172,15 @@ export class UsePan {
          * 获取五行色
          * @param d
          */
-        const color = (d: ganzhi.EarthlyBranch) => {
+        const color = (d: GanZhi.EarthlyBranch) => {
             switch (d.wuXing) {
-                case ganzhi.WuXing.Shui:
+                case GanZhi.WuXing.Shui:
                     return shuiColor
-                case ganzhi.WuXing.Mu:
+                case GanZhi.WuXing.Mu:
                     return muColor
-                case ganzhi.WuXing.Huo:
+                case GanZhi.WuXing.Huo:
                     return huoColor
-                case ganzhi.WuXing.Tu:
+                case GanZhi.WuXing.Tu:
                     return tuColor
                 default:
                     return jinColor
@@ -196,7 +190,7 @@ export class UsePan {
          * 获取角度
          * @param branch
          */
-        const getAngle = (branch: ganzhi.EarthlyBranch) => {
+        const getAngle = (branch: GanZhi.EarthlyBranch) => {
             const stepAngle = Math.PI / 6;
             const startAngle = Math.PI - stepAngle / 2 + stepAngle * (branch.id - 1);
             return {
@@ -208,7 +202,7 @@ export class UsePan {
          * 绘制弧形
          * @param branch
          */
-        const useArc = (branch: ganzhi.EarthlyBranch) => {
+        const useArc = (branch: GanZhi.EarthlyBranch) => {
             const path = arc()
                 .padAngle(0.008)
                 ({
@@ -224,7 +218,7 @@ export class UsePan {
          * 绘制地支文字
          * @param branch
          */
-        const useLabel = (branch: ganzhi.EarthlyBranch) => {
+        const useLabel = (branch: GanZhi.EarthlyBranch) => {
             const dy = this.width * 0.5 - 80
             this.tianGroup.append('text')
                 .attr('x', -10).attr('y', 8)
@@ -232,10 +226,10 @@ export class UsePan {
                 .attr('fill', '#dfdfd6').text(branch.value)
                 .attr('font-size', 20).attr('font-weight', 'bold')
         }
-        dizhiList.forEach(b => {
+        diZhiList.forEach(b => {
             useArc(b).attr('fill', color(b))
         })
-        dizhiList.forEach(b => {
+        diZhiList.forEach(b => {
             useLabel(b)
         })
     }
@@ -279,7 +273,7 @@ export class UsePan {
                     outerRadius: this.width / 2 - 100,
                     ...getAngle(index)
                 })
-            return this.tianGroup.append("path")
+            return this.jiangGroup.append("path")
                 .attr("d", path)
         }
         /**
@@ -289,7 +283,7 @@ export class UsePan {
          */
         const useLabel = (label: string, index: number,) => {
             const dy = this.width / 2 - 70 - 60
-            this.tianGroup.append('text')
+            this.jiangGroup.append('text')
                 .attr('x', -16).attr('y', 8)
                 .attr('transform', `rotate(${30 * index} ) translate(0,${dy})`) //
                 .attr('fill', '#dfdfd6').text(label)
@@ -321,6 +315,27 @@ export class UsePan {
             .attr('width', 110).attr('height', 40).attr("fill", "#409EFF99")
             .attr("stroke", '#409EFF').attr("stroke-width", 2).attr("rx", "5")
             .classed('svg-rect-hover', true)
+            .on('click', () => {
+                this._handleClick()
+            })
     }
-}
 
+    /**
+     * 处理起课方法
+     * @param fn
+     */
+    handleClick(fn: () => void): void {
+        this._handleClick = fn
+    }
+
+    /**
+     * 起课
+     * @param m 月将 id，1-12
+     * @param d 加时，1-12
+     * @param g 贵人乘天盘所在：1-12
+     */
+    handleStart(m: number, d: number, g: number): void {
+
+    }
+
+}

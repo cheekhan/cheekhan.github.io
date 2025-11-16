@@ -1,4 +1,4 @@
-import {YinYang, WuXing, ShengKe} from "./types";
+import {YinYang, WuXing, ShengKe, ZhiName} from "./types";
 
 /**
  * 地支：

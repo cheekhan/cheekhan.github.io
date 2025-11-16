@@ -803,6 +803,6 @@ const index = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePropert
   useYmdhInfo
 }, Symbol.toStringTag, { value: "Module" }));
 export {
-  index as ganzhi
+  index as GanZhi
 };
 //# sourceMappingURL=index.js.map

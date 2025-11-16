@@ -1,3 +1,1 @@
-import * as ganzhi from "./ganZhi";
-
-export { ganzhi };
+export * as GanZhi from "./ganZhi";

@@ -1,28 +1,53 @@
 <script setup lang="ts">
 import {currentInfo, useDate} from "./index";
-import {ref, onMounted} from "vue";
+import {ref, onMounted, computed} from "vue";
 import TimeFormate from "./components/TimeFormate.vue";
-import {ganzhi} from "@cheekhan/utils";
+import {GanZhi} from "@cheekhan/utils";
 import {UsePan} from "./usePan.ts";
 
 defineOptions({
-  name: "DaliurenIndex",
+  name: "DaliuRenIndex",
 });
 // 当前时间
 const currentTime = ref(currentInfo);
 // 地支列表
-const dizhiList = ref(ganzhi.useDizhiList());
-const dizhiSelectValue = ref(dizhiList.value[0]);
+const diZhiList = ref(GanZhi.useDizhiList());
+const diZhiSelectValue = ref(diZhiList.value[0]);
 // 切换活数或正时
 const useHour = ref(true);
 
 /** -----------  排盘需要的信息 ------------ */
 const date = ref(useDate());
+const ymdInfo = computed(() => GanZhi.useYmdhInfo(date.value))
+const sizhu = computed(() => {
+  return {
+    y: [ymdInfo.value.y[0].value, ymdInfo.value.y[1].value],
+    m: [ymdInfo.value.m[0].value, ymdInfo.value.m[1].value],
+    d: [ymdInfo.value.d[0].value, ymdInfo.value.d[1].value],
+    h: [ymdInfo.value.h[0].value, ymdInfo.value.h[1].value],
+  }
+})
+const monthLeader = computed(() => ymdInfo.value.yuejiang)
+
+// 点击清空时，重置盘面
+function resetInfo(v: string): void {
+  if (!v) {
+    date.value = useDate()
+  }
+}
 
 /** -- 渲染盘 --- */
 const pan = ref<UsePan | null>(null);
 const container = ref<HTMLDivElement | null>(null);
-onMounted(() => container.value ? pan.value = new UsePan(container.value) : 0)
+onMounted(() => {
+  if (container.value) {
+    pan.value = new UsePan(container.value)
+    pan.value.handleClick(() => {
+      // 计算出月将加时、贵人所在，的 id
+      pan.value?.handleStart(1, 1, 1)
+    })
+  }
+})
 </script>
 <template>
   <div class="dlr-container flex-box">
@@ -34,47 +59,43 @@ onMounted(() => container.value ? pan.value = new UsePan(container.value) : 0)
           <el-date-picker
               v-model="date"
               type="datetime"
-              :clearable="false"
+              :clearable="true"
               placeholder="手动修改日期"
+              @change="resetInfo"
           />
         </div>
         <div class="tool-item">
           <p>四柱：</p>
-          <el-row>
-            <el-col :offset="4" :span="4">年</el-col>
-            <el-col :span="4">月</el-col>
-            <el-col :span="4">日</el-col>
-            <el-col :span="4">时</el-col>
+          <el-row style="margin:10px 0 5px 0">
+            <el-col :offset="4" :span="4">{{ sizhu.y[0] }}</el-col>
+            <el-col :span="4">{{ sizhu.m[0] }}</el-col>
+            <el-col :span="4">{{ sizhu.d[0] }}</el-col>
+            <el-col :span="4">{{ sizhu.h[0] }}</el-col>
           </el-row>
-          <el-row>
-            <el-col :offset="4" :span="4">甲</el-col>
-            <el-col :span="4">甲</el-col>
-            <el-col :span="4">甲</el-col>
-            <el-col :span="4">甲</el-col>
-          </el-row>
-          <el-row>
-            <el-col :offset="4" :span="4">子</el-col>
-            <el-col :span="4">子</el-col>
-            <el-col :span="4">子</el-col>
-            <el-col :span="4">子</el-col>
+          <el-row style="margin:0 0 10px 0">
+            <el-col :offset="4" :span="4">{{ sizhu.y[1] }}</el-col>
+            <el-col :span="4">{{ sizhu.m[1] }}</el-col>
+            <el-col :span="4">{{ sizhu.d[1] }}</el-col>
+            <el-col :span="4">{{ sizhu.h[1] }}</el-col>
           </el-row>
         </div>
         <div class="tool-item flex-box flex-start">
           <p>月将：</p>
-          <p style="color: var(--font-color-normal)">猫</p>
+          <p style="color: var(--font-color-normal)">{{ monthLeader.value }}</p>
         </div>
         <div class="tool-item">
           <p>占时：</p>
           <div class="flex-box">
             <el-select
-                v-model="dizhiSelectValue"
+                v-model="diZhiSelectValue"
                 value-key="id"
                 placeholder="选择地支"
                 style="width: 70px"
                 :disabled="useHour"
+                :size="'small'"
             >
               <el-option
-                  v-for="item in dizhiList"
+                  v-for="item in diZhiList"
                   :key="item.id"
                   :label="item.value"
                   :value="item"
@@ -82,7 +103,7 @@ onMounted(() => container.value ? pan.value = new UsePan(container.value) : 0)
             </el-select>
             <el-switch v-model="useHour" style="margin: 0 10px"/>
             <p :style="{ color: useHour ? '#9499ff' : '#98989f' }">
-              {{ dizhiList[parseInt(currentTime.month) - 1]?.value }}
+              {{ diZhiList[parseInt(currentTime.month) - 1]?.value }}
             </p>
           </div>
         </div>
@@ -128,7 +149,7 @@ onMounted(() => container.value ? pan.value = new UsePan(container.value) : 0)
     height: 493px;
     margin-left: 20px;
     background-color: #1D1E1F;
-    border:2px solid #363637;
+    border: 2px solid #363637;
   }
 }
 

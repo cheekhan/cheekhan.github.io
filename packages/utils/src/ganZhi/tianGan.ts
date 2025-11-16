@@ -1,4 +1,4 @@
-import {YinYang, WuXing, ShengKe} from "./types";
+import {YinYang, WuXing, ShengKe, GanName} from "./types";
 
 /**
  * 天干
