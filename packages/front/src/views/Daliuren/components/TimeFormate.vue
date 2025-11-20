@@ -1,15 +1,19 @@
 <script setup lang="ts">
-  import type { CurrenTimeInfo } from "../types";
-  import { currentInfo } from "../index";
   defineOptions({
     name: "TimeFormate",
   });
+
   const {
-    year = currentInfo.year,
-    month = currentInfo.month,
-    day = currentInfo.day,
-    time = currentInfo.time,
-  } = defineProps<Partial<CurrenTimeInfo>>();
+    year = "",
+    month = "",
+    day = "",
+    time = "",
+  } = defineProps<{
+    year: string;
+    month: string;
+    day: string;
+    time: string;
+  }>();
 </script>
 <template>
   <div class="flex-box tf-box">
