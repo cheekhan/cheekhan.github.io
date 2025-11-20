@@ -1,5 +1,4 @@
-import stems, {
-  HeavenlyStem,
+import {
   useTianganList,
   StemJia,
   StemBing,
@@ -7,8 +6,14 @@ import stems, {
   StemGeng,
   StemRen,
 } from "./tianGan";
-import branches, { EarthlyBranch } from "./diZhi";
 import { findNext, linkRoot, JiaziLinkType } from "./utils";
+
+import { useDizhiList } from "./diZhi";
+import type { EarthlyBranch, HeavenlyStem } from "./types";
+
+const branches = useDizhiList();
+const stems = useTianganList();
+
 /**
  * 处理日期：
  *  1、计算年和节气

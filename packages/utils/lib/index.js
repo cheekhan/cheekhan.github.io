@@ -27,40 +27,273 @@ class EarthlyBranch {
   static wuXingRel(src, tar) {
     const relMap = {
       //ShengKe.Sheng | ShengKe.Ke | ShengKe.BeiSheng | ShengKe.BeiKe | ShengKe.BiHe;
-      [WuXing.Jin]: {
-        [WuXing.Jin]: ShengKe.BiHe,
-        [WuXing.Shui]: ShengKe.Sheng,
-        [WuXing.Mu]: ShengKe.Ke,
-        [WuXing.Huo]: ShengKe.BeiKe,
-        [WuXing.Tu]: ShengKe.BeiSheng
+      [
+        0
+        /* Jin */
+      ]: {
+        [
+          0
+          /* Jin */
+        ]: "相同",
+        [
+          1
+          /* Shui */
+        ]: "生",
+        [
+          2
+          /* Mu */
+        ]: "克",
+        [
+          3
+          /* Huo */
+        ]: "被克",
+        [
+          4
+          /* Tu */
+        ]: "被生"
+        /* BeiSheng */
       },
-      [WuXing.Shui]: {
-        [WuXing.Jin]: ShengKe.BeiSheng,
-        [WuXing.Shui]: ShengKe.BiHe,
-        [WuXing.Mu]: ShengKe.Sheng,
-        [WuXing.Huo]: ShengKe.Ke,
-        [WuXing.Tu]: ShengKe.BeiKe
+      [
+        1
+        /* Shui */
+      ]: {
+        [
+          0
+          /* Jin */
+        ]: "被生",
+        [
+          1
+          /* Shui */
+        ]: "相同",
+        [
+          2
+          /* Mu */
+        ]: "生",
+        [
+          3
+          /* Huo */
+        ]: "克",
+        [
+          4
+          /* Tu */
+        ]: "被克"
+        /* BeiKe */
       },
-      [WuXing.Mu]: {
-        [WuXing.Jin]: ShengKe.BeiKe,
-        [WuXing.Shui]: ShengKe.BeiSheng,
-        [WuXing.Mu]: ShengKe.BiHe,
-        [WuXing.Huo]: ShengKe.Sheng,
-        [WuXing.Tu]: ShengKe.Ke
+      [
+        2
+        /* Mu */
+      ]: {
+        [
+          0
+          /* Jin */
+        ]: "被克",
+        [
+          1
+          /* Shui */
+        ]: "被生",
+        [
+          2
+          /* Mu */
+        ]: "相同",
+        [
+          3
+          /* Huo */
+        ]: "生",
+        [
+          4
+          /* Tu */
+        ]: "克"
+        /* Ke */
       },
-      [WuXing.Huo]: {
-        [WuXing.Jin]: ShengKe.Ke,
-        [WuXing.Shui]: ShengKe.BeiKe,
-        [WuXing.Mu]: ShengKe.BeiSheng,
-        [WuXing.Huo]: ShengKe.BiHe,
-        [WuXing.Tu]: ShengKe.Sheng
+      [
+        3
+        /* Huo */
+      ]: {
+        [
+          0
+          /* Jin */
+        ]: "克",
+        [
+          1
+          /* Shui */
+        ]: "被克",
+        [
+          2
+          /* Mu */
+        ]: "被生",
+        [
+          3
+          /* Huo */
+        ]: "相同",
+        [
+          4
+          /* Tu */
+        ]: "生"
+        /* Sheng */
       },
-      [WuXing.Tu]: {
-        [WuXing.Jin]: ShengKe.Sheng,
-        [WuXing.Shui]: ShengKe.Ke,
-        [WuXing.Mu]: ShengKe.BeiKe,
-        [WuXing.Huo]: ShengKe.BeiSheng,
-        [WuXing.Tu]: ShengKe.BiHe
+      [
+        4
+        /* Tu */
+      ]: {
+        [
+          0
+          /* Jin */
+        ]: "生",
+        [
+          1
+          /* Shui */
+        ]: "克",
+        [
+          2
+          /* Mu */
+        ]: "被克",
+        [
+          3
+          /* Huo */
+        ]: "被生",
+        [
+          4
+          /* Tu */
+        ]: "相同"
+        /* BiHe */
+      }
+    };
+    return relMap[src][tar];
+  }
+}
+class HeavenlyStem {
+  static wuXingRel(src, tar) {
+    const relMap = {
+      //ShengKe.Sheng | ShengKe.Ke | ShengKe.BeiSheng | ShengKe.BeiKe | ShengKe.BiHe;
+      [
+        0
+        /* Jin */
+      ]: {
+        [
+          0
+          /* Jin */
+        ]: "相同",
+        [
+          1
+          /* Shui */
+        ]: "生",
+        [
+          2
+          /* Mu */
+        ]: "克",
+        [
+          3
+          /* Huo */
+        ]: "被克",
+        [
+          4
+          /* Tu */
+        ]: "被生"
+        /* BeiSheng */
+      },
+      [
+        1
+        /* Shui */
+      ]: {
+        [
+          0
+          /* Jin */
+        ]: "被生",
+        [
+          1
+          /* Shui */
+        ]: "相同",
+        [
+          2
+          /* Mu */
+        ]: "生",
+        [
+          3
+          /* Huo */
+        ]: "克",
+        [
+          4
+          /* Tu */
+        ]: "被克"
+        /* BeiKe */
+      },
+      [
+        2
+        /* Mu */
+      ]: {
+        [
+          0
+          /* Jin */
+        ]: "被克",
+        [
+          1
+          /* Shui */
+        ]: "被生",
+        [
+          2
+          /* Mu */
+        ]: "相同",
+        [
+          3
+          /* Huo */
+        ]: "生",
+        [
+          4
+          /* Tu */
+        ]: "克"
+        /* Ke */
+      },
+      [
+        3
+        /* Huo */
+      ]: {
+        [
+          0
+          /* Jin */
+        ]: "克",
+        [
+          1
+          /* Shui */
+        ]: "被克",
+        [
+          2
+          /* Mu */
+        ]: "被生",
+        [
+          3
+          /* Huo */
+        ]: "相同",
+        [
+          4
+          /* Tu */
+        ]: "生"
+        /* Sheng */
+      },
+      [
+        4
+        /* Tu */
+      ]: {
+        [
+          0
+          /* Jin */
+        ]: "生",
+        [
+          1
+          /* Shui */
+        ]: "克",
+        [
+          2
+          /* Mu */
+        ]: "被克",
+        [
+          3
+          /* Huo */
+        ]: "被生",
+        [
+          4
+          /* Tu */
+        ]: "相同"
+        /* BiHe */
       }
     };
     return relMap[src][tar];
@@ -402,20 +635,6 @@ class BranchHai extends EarthlyBranch {
     throw new Error("Method not implemented.");
   }
 }
-const branches = [
-  new BranchZi(),
-  new BranchChou(),
-  new BranchYin(),
-  new BranchMao(),
-  new BranchChen(),
-  new BranchSi(),
-  new BranchWu(),
-  new BranchWei(),
-  new BranchShen(),
-  new BranchYou(),
-  new BranchXu(),
-  new BranchHai()
-];
 function useDizhiList(start) {
   const _arr = [
     new BranchZi(),
@@ -433,50 +652,8 @@ function useDizhiList(start) {
   ];
   const step = (start?.id || 1) - 1;
   const end = _arr.splice(0, step);
-  return [..._arr, ...end];
-}
-class HeavenlyStem {
-  static wuXingRel(src, tar) {
-    const relMap = {
-      //ShengKe.Sheng | ShengKe.Ke | ShengKe.BeiSheng | ShengKe.BeiKe | ShengKe.BiHe;
-      [WuXing.Jin]: {
-        [WuXing.Jin]: ShengKe.BiHe,
-        [WuXing.Shui]: ShengKe.Sheng,
-        [WuXing.Mu]: ShengKe.Ke,
-        [WuXing.Huo]: ShengKe.BeiKe,
-        [WuXing.Tu]: ShengKe.BeiSheng
-      },
-      [WuXing.Shui]: {
-        [WuXing.Jin]: ShengKe.BeiSheng,
-        [WuXing.Shui]: ShengKe.BiHe,
-        [WuXing.Mu]: ShengKe.Sheng,
-        [WuXing.Huo]: ShengKe.Ke,
-        [WuXing.Tu]: ShengKe.BeiKe
-      },
-      [WuXing.Mu]: {
-        [WuXing.Jin]: ShengKe.BeiKe,
-        [WuXing.Shui]: ShengKe.BeiSheng,
-        [WuXing.Mu]: ShengKe.BiHe,
-        [WuXing.Huo]: ShengKe.Sheng,
-        [WuXing.Tu]: ShengKe.Ke
-      },
-      [WuXing.Huo]: {
-        [WuXing.Jin]: ShengKe.Ke,
-        [WuXing.Shui]: ShengKe.BeiKe,
-        [WuXing.Mu]: ShengKe.BeiSheng,
-        [WuXing.Huo]: ShengKe.BiHe,
-        [WuXing.Tu]: ShengKe.Sheng
-      },
-      [WuXing.Tu]: {
-        [WuXing.Jin]: ShengKe.Sheng,
-        [WuXing.Shui]: ShengKe.Ke,
-        [WuXing.Mu]: ShengKe.BeiKe,
-        [WuXing.Huo]: ShengKe.BeiSheng,
-        [WuXing.Tu]: ShengKe.BiHe
-      }
-    };
-    return relMap[src][tar];
-  }
+  _arr.push(...end);
+  return _arr;
 }
 class StemJia extends HeavenlyStem {
   wuXing = WuXing.Huo;
@@ -568,18 +745,6 @@ class StemGui extends HeavenlyStem {
     throw new Error("Method not implemented.");
   }
 }
-const stems = [
-  new StemJia(),
-  new StemYi(),
-  new StemBing(),
-  new StemDing(),
-  new StemWu(),
-  new StemJi(),
-  new StemGeng(),
-  new StemXin(),
-  new StemRen(),
-  new StemGui()
-];
 function useTianganList(start) {
   const _arr = [
     new StemJia(),
@@ -595,10 +760,13 @@ function useTianganList(start) {
   ];
   const step = (start?.id || 1) - 1;
   const end = _arr.splice(0, step);
-  return [..._arr, ...end];
+  _arr.push(...end);
+  return _arr;
 }
+const branches$1 = useDizhiList();
+const stems$1 = useTianganList();
 const _createLink = () => {
-  let root = { data: [stems[0], branches[0]], next: null };
+  let root = { data: [stems$1[0], branches$1[0]], next: null };
   let i = 0;
   let head = null;
   let s = 1, b = 1;
@@ -608,13 +776,13 @@ const _createLink = () => {
     if (head) {
       const node = {
         next: null,
-        data: [stems[s], branches[b]]
+        data: [stems$1[s], branches$1[b]]
       };
       head.next = node;
       head = node;
     } else {
       root = head = {
-        data: [stems[s], branches[b]],
+        data: [stems$1[s], branches$1[b]],
         next: null
       };
     }
@@ -648,6 +816,8 @@ function findNext(stem, branch, step = 1) {
   }
   return head;
 }
+const branches = useDizhiList();
+const stems = useTianganList();
 const yearStartDate = ["2025-01-29", "2026-02-17"];
 const jieqiGroupByYear = {
   2025: [
@@ -767,6 +937,29 @@ function _dayToHour(d) {
   arr.push(arr[0], arr[1]);
   return arr;
 }
+function useGuiRenList(asc = true) {
+  const arr = [
+    "贵人",
+    "螣蛇",
+    "朱雀",
+    "六合",
+    "勾陈",
+    "青龙",
+    "天空",
+    "白虎",
+    "太常",
+    "玄武",
+    "太阴",
+    "天后"
+  ];
+  if (!asc) {
+    const head = arr[0];
+    arr.shift();
+    arr.reverse();
+    arr.unshift(head);
+  }
+  return arr;
+}
 const index = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   BranchChen,
@@ -799,6 +992,7 @@ const index = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePropert
   findNext,
   linkRoot,
   useDizhiList,
+  useGuiRenList,
   useTianganList,
   useYmdhInfo
 }, Symbol.toStringTag, { value: "Module" }));

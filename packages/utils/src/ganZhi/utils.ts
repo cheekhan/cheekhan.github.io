@@ -1,5 +1,9 @@
-import stems, { HeavenlyStem } from "./tianGan";
-import branches, { EarthlyBranch } from "./diZhi";
+import { useDizhiList } from "./diZhi";
+import { useTianganList } from "./tianGan";
+import type { EarthlyBranch, HeavenlyStem } from "./types";
+
+const branches = useDizhiList();
+const stems = useTianganList();
 // 甲子组成的链表
 export type JiaziLinkType = {
   data: [HeavenlyStem, EarthlyBranch];
@@ -70,33 +74,3 @@ export function findNext(
   }
   return head;
 }
-
-/**
- * 没用到的函数
- * 
-// 将干支信息，组合为一个节点，并返回在链中的位置
-export function useJiaziNode(stem : HeavenlyStem, branch : EarthlyBranch) : JiaziLink | null {
-    let head = root
-    if (head) {
-        while (head) {
-            if (head.data[0].value === stem.value && head.data[1].value === branch.value) {
-                return head
-            }
-            head = head.next
-        }
-    }
-    return null
-}
-// 获取甲子循环
-export function useAllNodes() {
-    let head = root;
-    const arr:Array<[HeavenlyStem, EarthlyBranch]> = [];
-    while (head.next) {
-        arr.push(head.data)
-        head = head.next
-    }
-    return arr
-}
- * 
- * 
- */
