@@ -116,10 +116,46 @@ export class QiKe {
     }
     return arr;
   }
+  /**
+   * 将地盘和天盘，转为数组
+   * @param root
+   */
+  private circleToList(root: BranchChain): Array<BranchType> {
+    let head = root;
+    const startID = head.data.id;
+    const arr = [];
+    while (true) {
+      arr.push(head.data);
+      if (!head.next) throw new Error("环遍历出错");
+      head = head.next;
+      if (startID === head.data.id) {
+        return arr;
+      }
+    }
+  }
+  /**
+   * 获取盘数据
+   * @returns
+   */
   useData() {
-    console.log(this.diHead);
-    console.log(this.tianHead);
-    console.log(this.guiHead);
-    console.log(this.guiRenList);
+    const diList = this.circleToList(this.diHead);
+    const tianList = this.circleToList(this.tianHead);
+    const guiList = this.guiRenList;
+    const arr: Array<
+      [GanZhi.EarthlyBranch | "", GanZhi.EarthlyBranch | "", GanZhi.GuiRen | ""]
+    > = [];
+    for (let i = 0; i < 12; i++) {
+      const item: [
+        GanZhi.EarthlyBranch | "",
+        GanZhi.EarthlyBranch | "",
+        GanZhi.GuiRen | "",
+      ] = ["", "", ""];
+      if (diList[i]) item[0] = diList[i];
+      if (tianList[i]) item[1] = tianList[i];
+      if (guiList[i]) item[2] = guiList[i];
+      arr.push(item);
+    }
+    console.log(arr);
+    return arr;
   }
 }
