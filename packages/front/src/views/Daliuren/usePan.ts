@@ -54,12 +54,13 @@ export class UsePan {
         const cx = this.width * 0.5;
         const cy = this.height * 0.5;
         // 其他盘的容器
-        this.diGroup = this.svg.append("g");
+        this.diGroup = this.svg.append("g").classed('di', true);
         this.tianGroup = this.svg
             .append("g")
+            .classed("tian", true)
             .attr("transform", `translate(${cx},${cy})`);
         this.jiangGroup = this.svg
-            .append("g")
+            .append("g").classed("jiang", true)
             .attr("transform", `translate(${cx},${cy})`);
         this.infoGroup = this.svg
             .append("g")
@@ -450,7 +451,7 @@ export class UsePan {
             .attr("stroke", lightColor);
         this.actionLabel = this.infoGroup
             .append("text")
-            .text("甲子日，干上卯")
+            .text("还未起课")
             .attr("text-anchor", "middle")
             .attr("dy", -10)
             .attr("font-size", 18)
