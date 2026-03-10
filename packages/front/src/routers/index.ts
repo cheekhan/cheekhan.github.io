@@ -1,6 +1,6 @@
 import {
   createRouter,
-  createWebHistory,
+  createWebHashHistory,
   type RouteRecordRaw,
 } from "vue-router";
 import { DaliurenRoute } from "./models";
@@ -15,7 +15,7 @@ function useAllRoutes(): Array<RouteRecordRaw> {
 }
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes: useAllRoutes(),
 });
 
