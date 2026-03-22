@@ -49,10 +49,6 @@ export default withPwa(defineConfig({
                     {
                         text: "3、气的流转",
                         link: "/2、卜的基础/3、气的流转"
-                    },
-                    {
-                        text: "4、一些名词的解释",
-                        link: "/2、卜的基础/4、一些名词的解释"
                     }
                 ]
             },
@@ -122,10 +118,6 @@ export default withPwa(defineConfig({
             {
                 text: "四、壬归精粹",
                 items: [
-                    {
-                        text: '总论',
-                        link: "/4、壬归/0、总论",
-                    },
                     {
                         text: '四课',
                         link: "/4、壬归/1、四课",
