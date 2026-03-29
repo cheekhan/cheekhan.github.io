@@ -1,7 +1,11 @@
 <template>
-    <h1>知识库</h1>
-    <p>
-        顶部是菜单按钮+面包屑+操作按钮
-        编辑区
-    </p>
-    </template> 
+    <MdEditor v-model="text" />
+</template>
+
+<script setup>
+import { ref } from 'vue';
+import { MdEditor } from 'md-editor-v3';
+import 'md-editor-v3/lib/style.css';
+
+const text = ref('Hello Editor!');
+</script>

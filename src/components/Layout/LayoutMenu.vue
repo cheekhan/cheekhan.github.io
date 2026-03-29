@@ -1,40 +1,20 @@
 <script setup lang="ts">
 import logoImg from "@/static/logo.jpg";
-import {useRoute, useRouter} from "vue-router"
-import {ref, watch} from "vue";
+import { useRoute, useRouter } from "vue-router";
+import { ref, computed } from "vue";
+import useRoutes from "@/routers/models";
 
-const route = useRoute()
-const router = useRouter()
+const route = useRoute();
+const router = useRouter();
 
-const menuItems = ref([
-  {label: "起课排盘", path: "/daliuren", active: false},
-  {label: "其他", path: "/sss", active: false},
-])
-watch(() => route.path, () => {
-  menuItems.value.some(menuItem => {
-    if (menuItem.path === route.path) {
-      menuItem.active = true;
-      return true;
-    }
-  })
+// 获取所有路由
+const routes = computed(() => useRoutes().filter(r => r.path && r.name && r.path !== "/" && r.path !== "/404"));
 
-})
-
-/**
- * 点击操作时，除了跳转，还变样式
- * @param index
- */
-function handleClick(index: number): void {
-  menuItems.value.forEach((menuItem, itemIndex) => {
-    if (index === itemIndex) {
-      menuItem.active = true;
-      router.push(menuItem.path);
-    } else {
-      menuItem.active = false;
-    }
-  })
+function handleMenuSelect(path: string) {
+  if (route.path !== path) {
+    router.push(path);
+  }
 }
-
 </script>
 <template>
   <div class="radius-container full-block">
@@ -44,8 +24,23 @@ function handleClick(index: number): void {
       <el-divider/>
     </div>
     <div class="menu-body">
-      <p v-for="(item,index) in menuItems" :key="index" :class="{'active-menu':item.active}"
-         @click="handleClick(index)">{{ item.label }}</p>
+      <el-menu
+        :default-active="route.path"
+        class="el-menu-vertical-demo"
+        @select="handleMenuSelect"
+        router
+        background-color="var(--bg-dark-base)"
+        text-color="#fff"
+        active-text-color="#3e6b27"
+      >
+        <el-menu-item
+          v-for="item in routes"
+          :key="item.path"
+          :index="item.path"
+        >
+          {{ item.name }}
+        </el-menu-item>
+      </el-menu>
     </div>
   </div>
 </template>

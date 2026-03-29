@@ -1,19 +1,11 @@
-# Cheekhan 工程
+# cheekhan全栈工程
 
-## monorepo 工程说明
+## TODO
 
-dbky：工作使用的小工具
+### api
+- [ ] 数据库相关，了解session、表的建立、字段、依赖注入
+- [ ] 整理路由，定义url 和实体，产出接口文档
 
-docs：玄学文档
-
-front：前端工程
-
-utils：工具函数
-
-vite-plugins：自己使用的小插件
-
-## 其他说明
-
-nodejs 版本：22
-
-pnpm 版本：10
+### web
+- [ ] 开发页面整体布局
+- [ ] 
