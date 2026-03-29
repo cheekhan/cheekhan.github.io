@@ -1,22 +1,14 @@
 import {
   createRouter,
   createWebHashHistory,
-  type RouteRecordRaw,
 } from "vue-router";
-import { DaliurenRoute } from "./models";
+import useRoutes from "./models";
 
-function useAllRoutes(): Array<RouteRecordRaw> {
-  return [
-    {
-      path: "/",
-      children: [{ path: "", redirect: DaliurenRoute.path }, DaliurenRoute],
-    },
-  ];
-}
+
 
 const router = createRouter({
   history: createWebHashHistory(),
-  routes: useAllRoutes(),
+  routes: useRoutes(),
 });
 
 export default router;
