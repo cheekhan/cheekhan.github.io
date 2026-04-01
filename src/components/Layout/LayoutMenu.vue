@@ -28,10 +28,6 @@ function handleMenuSelect(path: string) {
         :default-active="route.path"
         class="el-menu-vertical-demo"
         @select="handleMenuSelect"
-        router
-        background-color="var(--bg-dark-base)"
-        text-color="#fff"
-        active-text-color="#3e6b27"
       >
         <el-menu-item
           v-for="item in routes"
@@ -76,5 +72,8 @@ function handleMenuSelect(path: string) {
 
 .active-menu {
   box-shadow: 0 0 5px 0 rgb(62, 107, 39);
+}
+:deep(.el-menu){
+  border: none;
 }
 </style>

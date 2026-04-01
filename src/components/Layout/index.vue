@@ -35,21 +35,18 @@ defineOptions({
 
 :deep(.el-aside) {
   padding: 10px 0 10px 10px;
-  background-color: var(--bg-dark-base);
+  border-right: 1px solid var(--el-border-color);
 }
 
 :deep(.el-header) {
   padding: 10px 20px 0 10px;
-  background-color: var(--bg-dark-base);
 }
 
 :deep(.el-footer) {
   padding: 0 20px 10px 10px;
-  background-color: var(--bg-dark-base);
 }
 
 :deep(.el-main) {
   padding: 10px 20px 10px 10px;
-  background-color: var(--bg-dark-base);
 }
 </style>
