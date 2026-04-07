@@ -1,7 +1,7 @@
 {
   "name": "@cheekhan/utils",
   "private": false,
-  "version": "0.0.1", 
+  "version": "0.0.1",
   "files": [
     "lib",
     "index.d.ts"
@@ -17,11 +17,15 @@
     "dev": "vite",
     "build": "vite build",
     "test": "vitest"
-  }, 
+  },
   "devDependencies": {
-    "typescript": "catalog:",
-    "vite": "catalog:",
+    "@types/d3": "^7.4.3",
+    "typescript": "~5.9.3",
+    "vite": "^8.0.1",
     "vite-plugin-lib-types": "^3.1.2",
-    "vitest": "catalog:"
+    "vitest": "^4.1.2"
+  },
+  "dependencies": {
+    "d3": "^7.9.0"
   }
 }
