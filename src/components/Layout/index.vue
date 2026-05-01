@@ -1,24 +1,25 @@
 <script setup lang="ts">
-import LayoutBar from "./LayoutBar.vue";
-import LayoutMenu from "./LayoutMenu.vue";
-import {RouterView} from "vue-router";
+import { RouterView } from 'vue-router';
+import LayoutBar from './LayoutBar.vue';
+// import LayoutMenu from './LayoutMenu.vue';
+import LayoutMenu from './Menu.vue';
 
 defineOptions({
-  name: "LayoutIndex",
+  name: 'LayoutIndex',
 });
 </script>
 
 <template>
   <el-container class="full-body">
     <el-aside width="200px">
-      <LayoutMenu/>
+      <LayoutMenu />
     </el-aside>
     <el-container>
       <el-header>
-        <LayoutBar/>
+        <LayoutBar />
       </el-header>
       <el-main>
-        <RouterView/>
+        <RouterView />
       </el-main>
     </el-container>
   </el-container>
@@ -27,26 +28,27 @@ defineOptions({
 <style scoped>
 .full-body {
   height: 100vh;
-}
-
-:deep(el-container ) {
-  min-width: 1280px;
+  width: 100vw;
+  box-sizing: border-box;
+  background-color: var(--bgc-info);
+  color: var(--primary-color);
 }
 
 :deep(.el-aside) {
-  padding: 10px 0 10px 10px;
-  border-right: 1px solid var(--el-border-color);
+  margin: 10px;
+  background-color: var(--bgc-dark);
+  border-radius: 10px;
 }
 
 :deep(.el-header) {
-  padding: 10px 20px 0 10px;
-}
-
-:deep(.el-footer) {
-  padding: 0 20px 10px 10px;
+  margin: 10px 10px 10px 0;
+  border-radius: 10px;
+  background-color: var(--bgc-dark);
 }
 
 :deep(.el-main) {
-  padding: 10px 20px 10px 10px;
+  margin: 0 10px 10px 0;
+  border-radius: 10px;
+  background-color: var(--bgc-dark);
 }
 </style>
