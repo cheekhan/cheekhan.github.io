@@ -18,7 +18,7 @@ hero:
       link: /计算机
     - theme: alt
       text: 大六壬
-      link: /大六壬/古代哲学范畴/世界观
+      link: /大六壬/01-古代哲学范畴/世界观
     - theme: alt
       text: 英语
       link: /英语
