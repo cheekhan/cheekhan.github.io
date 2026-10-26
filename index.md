@@ -22,6 +22,9 @@ hero:
     - theme: alt
       text: 英语
       link: /英语
+    - theme: alt
+      text: 上岸
+      link: /上岸/
 
 features:
   - title: 数学

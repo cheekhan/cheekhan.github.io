@@ -15,9 +15,18 @@ export default defineConfig({
       { text: "计算机", link: "/计算机" },
       { text: "大六壬", link: "/大六壬/01-古代哲学范畴/世界观" },
       { text: "英语", link: "英语" },
+      { text: "上岸", link: "/上岸/" },
     ],
     sidebar: {
-      "/会计/": [],
+      "/会计/": [
+        {
+          text: "会计学",
+          items: [
+            { text: "概述", link: "/会计/" },
+            { text: "初级会计实务", link: "/会计/初级会计实务" },
+          ],
+        },
+      ],
       "/数学/": [],
       "/计算机/": [],
       "/大六壬/": [
@@ -162,8 +171,50 @@ export default defineConfig({
         },
       ],
       "/英语/": [],
+      "/上岸/": [
+        {
+          text: "考公总览",
+          items: [
+            { text: "上岸路线", link: "/上岸/" },
+            { text: "行测总览", link: "/上岸/行测" },
+          ],
+        },
+        {
+          text: "言语理解",
+          items: [{ text: "概述", link: "/上岸/言语理解/" }],
+        },
+        {
+          text: "资料分析",
+          items: [{ text: "概述", link: "/上岸/资料分析/" }],
+        },
+        {
+          text: "判断推理",
+          items: [{ text: "概述", link: "/上岸/判断推理/" }],
+        },
+        {
+          text: "政治形势",
+          items: [{ text: "概述", link: "/上岸/政治形势/" }],
+        },
+        {
+          text: "写作",
+          items: [{ text: "概述", link: "/上岸/写作/" }],
+        },
+        {
+          text: "词语积累",
+          items: [{ text: "概述", link: "/上岸/词语积累/" }],
+        },
+        {
+          text: "面试",
+          items: [{ text: "面试", link: "/上岸/面试" }],
+        },
+      ],
     },
     // ],
+    // 右侧目录显示层级：h2 ~ h3
+    outline: {
+      level: [2, 3],
+      label: "本页目录",
+    },
     socialLinks: [
       {
         icon: "github",
